@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fio de Aroma | Saboaria Artesanal e Bem-Estar</title>
+    <!-- Fontes elegantes do Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Nova Paleta de Cores baseada no PDF */
+        :root {
+            --primary-color: #4A5D23; /* Verde Oliva Escuro */
+            --secondary-color: #F8F5EE; /* Bege claro / Fundo do PDF */
+            --accent-color: #C19A6B; /* Dourado/Ocre escuro */
+            --text-color: #333333; /* Cinza escuro para leitura */
+            --danger-color: #A94442; /* Vermelho suave para "O que evitar" */
+            --bg-white: #FFFFFF;
+            --whatsapp-green: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: var(--bg-white);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .logo {
+            font-size: 26px;
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        nav a {
+            margin-left: 25px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero / Banner Principal */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(rgba(74, 93, 35, 0.6), rgba(74, 93, 35, 0.8)), url('https://images.unsplash.com/photo-1600857062241-98e5dba7f214?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            font-weight: 300;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: 0.3s;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background-color: #A88157;
+            transform: translateY(-3px);
+        }
+
+        /* Seção: O Guia (E-book) */
+        .ebook-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 5%;
+            background-color: var(--bg-white);
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .ebook-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 400px;
+            box-shadow: 15px 15px 0px var(--accent-color);
+            border-radius: 5px;
+        }
+
+        .ebook-text {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+        }
+
+        .ebook-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .ebook-text p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .ebook-text ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .ebook-text li {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        .ebook-text li::before {
+            content: "🌿 ";
+        }
+
+        /* Seção Educacional: Extrato vs Essência */
+        .education {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .education h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .info-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 1000px;
+            margin: 0 auto 50px auto;
+        }
+
+        .info-card {
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 300px;
+            border-top: 5px solid var(--primary-color);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .info-card.essence {
+            border-top-color: var(--accent-color);
+        }
+
+        .info-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        /* Ingredientes e Combinações */
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .ing-card {
+            background: var(--bg-white);
+            border-radius: 8px;
+            padding: 25px;
+            text-align: left;
+            border: 1px solid #EAEAEA;
+        }
+
+        .ing-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .rules-container {
+            display: flex;
+            gap: 40px;
+            max-width: 1200px;
+            margin: 60px auto 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .rules-box {
+            flex: 1;
+            min-width: 300px;
+            background: var(--bg-white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .rules-box.avoid {
+            border-left: 5px solid var(--danger-color);
+        }
+        
+        .rules-box.success {
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .rules-box ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .rules-box.avoid li::before { content: "❌ "; }
+        .rules-box.success li::before { content: "🏆 "; }
+        .rules-box li { margin-bottom: 10px; font-weight: 500;}
+
+        /* Produtos */
+        .products {
+            padding: 80px 5%;
+            background-color: var(--bg-white);
+            text-align: center;
+        }
+
+        .products h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: var(--secondary-color);
+            border-radius: 10px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .btn-buy {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-buy:hover {
+            background-color: var(--accent-color);
+        }
+
+        /* Sobre */
+        .about {
+            padding: 80px 5%;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .about h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+            font-style: italic;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Contato */
+        .contact {
+            padding: 80px 5%;
+            text-align: center;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: var(--whatsapp-green);
+            color: white;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1ebe57;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: var(--bg-white);
+            color: var(--text-color);
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #EAEAEA;
+        }
+
+        footer a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 15px; }
+            nav { margin-top: 15px; }
+            nav a { margin: 0 10px; }
+            .hero h1 { font-size: 2.2rem; }
+            .ebook-section { flex-direction: column; text-align: center; }
+            .info-grid { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <a href="#" class="logo">Fio de Aroma</a>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#guia">Guia Saboaria</a>
+            <a href="#dicas">Dicas Essenciais</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre</a>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section id="inicio" class="hero">
+        <h1>Aroma que Transforma</h1>
+        <p>A união perfeita entre os benefícios da natureza e aromas que encantam. Saboaria artesanal feita com afeto e conhecimento.</p>
+        <a href="#guia" class="btn">Conheça nosso Material</a>
+    </section>
+
+    <!-- Seção do Guia / E-book -->
+    <section id="guia" class="ebook-section">
+        <!-- Substitua pelo link da capa do seu E-book/PDF -->
+        <img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Guia Completo de Essências e Extratos" class="ebook-image">
+        <div class="ebook-text">
+            <h2>Guia Completo de Essências & Extratos</h2>
+            <p>Tudo o que você precisa saber para criar sabonetes incríveis, cheirosos e cheios de benefícios para a pele. Um material rico e visual preparado pela Fio de Aroma.</p>
+            <ul>
+                <li>Entenda a diferença entre essências e extratos</li>
+                <li>Descubra as melhores combinações que vendem muito</li>
+                <li>Aprenda sobre Extratos Neutros e propriedades de cada erva</li>
+                <li>Dicas do que <strong>evitar</strong> na saboaria</li>
+            </ul>
+            <a href="#" class="btn" onclick="comprarWhatsApp('Guia Completo de Saboaria')">Adquirir o Guia Completo</a>
+        </div>
+    </section>
+
+    <!-- Seção Educacional baseada no PDF -->
+    <section id="dicas" class="education">
+        <h2>Entenda a Essência e o Extrato</h2>
+        <p style="margin-bottom: 40px; font-size: 1.1rem;">Na saboaria artesanal eles trabalham juntos, mas cada um tem uma função diferente:</p>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Extrato Glicólico 🌿</h3>
+                <p>É um extrato vegetal concentrado que traz <strong>propriedades reais</strong> para a pele. Serve para enriquecer o sabonete de forma natural.</p>
+                <br>
+                <p><strong>Benefícios:</strong> Calmante, hidratante, cicatrizante, antioxidante.</p>
+                <p><em>Dica: Normalmente usa-se de 1% a 3% na formulação. Menos é mais!</em></p>
+            </div>
+            <div class="info-card essence">
+                <h3>A Essência 🌸</h3>
+                <p>Responsável por trazer <strong>aroma e experiência sensorial</strong>. Ela conecta emoções e transforma o banho em um momento especial.</p>
+                <br>
+                <p><strong>Benefícios:</strong> Sensação de cuidado, bem-estar, relaxamento.</p>
+                <p><em>O segredo: Fazer o cheiro "conversar" com o benefício do extrato.</em></p>
+            </div>
+        </div>
+
+        <h3 style="margin-bottom: 30px; font-size: 2rem;">Ingredientes que Amamos</h3>
+        <div class="ingredients-grid">
+            <div class="ing-card">
+                <h4>🌼 Camomila</h4>
+                <p><strong>Excelente para:</strong> Peles sensíveis, bebês e efeito calmante.</p>
+                <p><strong>Combina com:</strong> Lavanda, Erva-doce e Chá branco.</p>
+            </div>
+            <div class="ing-card">
+                <h4>🌿 Alecrim</h4>
+                <p><strong>Excelente para:</strong> Oleosidade, acne e estimular a circulação.</p>
+                <p><strong>Combina com:</strong> Hortelã e Eucalipto (Linha refrescante).</p>
+            </div>
+            <div class="ing-card">
+                <h4>🍯 Mel</h4>
+                <p><strong>Excelente para:</strong> Hidratação intensa, maciez e nutrição.</p>
+                <p><strong>Combina com:</strong> Aveia, Baunilha e Leite (Linha conforto).</p>
+            </div>
+            <div class="ing-card">
+                <h4>🌹 Rosa Mosqueta</h4>
+                <p><strong>Excelente para:</strong> Regeneração celular, manchas e pele madura.</p>
+                <p><strong>Combina com:</strong> Rosas, Jasmim e Algodão (Linha sofisticada).</p>
+            </div>
+        </div>
+
+        <div class="rules-container">
+            <div class="rules-box success">
+                <h3 style="color: var(--primary-color);">🏆 Campeões de Venda</h3>
+                <p>Combinações que não têm erro:</p>
+                <ul>
+                    <li>Aveia + Mel (Conforto)</li>
+                    <li>Lavanda + Camomila (Calmante)</li>
+                    <li>Alecrim + Hortelã (Energizante)</li>
+                    <li>Aloe Vera + Bamboo (Refrescante)</li>
+                </ul>
+            </div>
+            <div class="rules-box avoid">
+                <h3 style="color: var(--danger-color);">⚠️ O Que Evitar</h3>
+                <p>Algumas combinações "brigam" nos sentidos:</p>
+                <ul>
+                    <li>Mel + Eucalipto</li>
+                    <li>Rosa Mosqueta + Tutti-frutti</li>
+                    <li>Alecrim + Baunilha</li>
+                    <li>Lavanda + Chocolate</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produtos (Sabonetes Prontos) -->
+    <section id="produtos" class="products">
+        <h2>Saboaria Pronta para Você</h2>
+        <p style="margin-bottom: 40px;">Além de ensinar, nós fazemos! Leve o poder da natureza para o seu banho.</p>
+        
+        <div class="product-grid">
+            <!-- Produto 1 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Sabonete Aveia e Mel">
+                <h3>Sabonete Aveia e Mel</h3>
+                <p>Linha Conforto - Hidratação intensa</p>
+                <h4 style="margin: 10px 0; color: var(--accent-color);">R$ 28,00</h4>
+                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Artesanal Aveia e Mel')">Comprar</a>
+            </div>
+
+            <!-- Produto 2 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1612817288484-6f916006741a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Sabonete Lavanda">
+                <h3>Sabonete Lavanda Spa</h3>
+                <p>Linha Relaxante com extrato de Camomila</p>
+                <h4 style="margin: 10px 0; color: var(--accent-color);">R$ 30,00</h4>
+                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Lavanda e Camomila')">Comprar</a>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1550506071-29e248b9f697?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Sabonete Alecrim">
+                <h3>Sabonete Alecrim Frescor</h3>
+                <p>Linha Energizante para peles oleosas</p>
+                <h4 style="margin: 10px 0; color: var(--accent-color);">R$ 28,00</h4>
+                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Alecrim Frescor')">Comprar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre / Missão -->
+    <section id="sobre" class="about">
+        <h2>Nossa Missão</h2>
+        <p>"Transformar ingredientes naturais em experiências que tocam e transformam vidas. Continue explorando, criando e espalhando beleza, cuidado e bem-estar através da natureza com a Fio de Aroma."</p>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact">
+        <h2>Fale com a gente</h2>
+        <p>Quer encomendar sabonetes, pedir nosso guia em PDF ou tirar dúvidas de saboaria? Chame no WhatsApp!</p>
+        <a href="https://wa.me/5522992668115?text=Olá!%20Vim%20pelo%20site%20da%20Fio%20de%20Aroma." target="_blank" class="whatsapp-btn">
+            📱 Falar no WhatsApp
+        </a>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2023 Fio de Aroma. Aroma que transforma.</p>
+        <p>Instagram: <a href="https://www.instagram.com/fiodearoma/" target="_blank">@fiodearoma</a></p>
+    </footer>
+
+    <!-- Script WhatsApp -->
+    <script>
+        function comprarWhatsApp(item) {
+            // COLOQUE SEU NÚMERO AQUI (Ex: 5511999999999)
+            const numeroWhatsApp = "5522992668115"; 
+            let mensagem = "";
+
+            if(item.includes("Guia")) {
+                mensagem = `Olá, Fio de Aroma! Gostaria de adquirir o *${item}* que vi no site. Como funciona?`;
+            } else {
+                mensagem = `Olá, Fio de Aroma! Gostaria de encomendar o produto: *${item}*.`;
+            }
+            
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
+
+        // Rolagem suave do menu
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetSection.offsetTop - 70,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
