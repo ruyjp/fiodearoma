@@ -92,11 +92,14 @@
             margin-bottom: 15px;
         }
 
-        .hero p {
+.hero p {
             font-size: 1.2rem;
             margin-bottom: 30px;
             max-width: 700px;
             font-weight: 300;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .btn {
@@ -253,18 +256,21 @@
         .rules-box {
             flex: 1;
             min-width: 300px;
-            background: var(--bg-white);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            background: #ffffff;
+            padding: 28px 26px;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .rules-box.success {
+            border-top: 6px solid var(--primary-color);
+            background: linear-gradient(180deg, rgba(74,93,35,0.10), #ffffff 120px);
         }
 
         .rules-box.avoid {
-            border-left: 5px solid var(--danger-color);
-        }
-        
-        .rules-box.success {
-            border-left: 5px solid var(--primary-color);
+            border-top: 6px solid var(--danger-color);
+            background: linear-gradient(180deg, rgba(169,68,66,0.10), #ffffff 120px);
         }
 
         .rules-box ul {
@@ -272,8 +278,11 @@
             margin-top: 15px;
         }
 
-        .rules-box.avoid li::before { content: "❌ "; }
-        .rules-box.success li::before { content: "🏆 "; }
+.rules-box.avoid li::before { content: ""; }
+
+        .rules-box.avoid ul li::marker { content: ""; }
+        .rules-box.avoid ul { list-style-type: none; }
+        .rules-box.success li::before { content: "* "; }
         .rules-box li { margin-bottom: 10px; font-weight: 500;}
 
         /* Produtos */
@@ -493,23 +502,31 @@
 
         <div class="rules-container">
             <div class="rules-box success">
-                <h3 style="color: var(--primary-color);">🏆 Campeões de Venda</h3>
-                <p>Combinações que não têm erro:</p>
+                <h3 style="color: var(--primary-color);">🌿 Conheça Nossos Produtos</h3>
+                <p></p>
                 <ul>
-                    <li>Aveia + Mel (Conforto)</li>
-                    <li>Lavanda + Camomila (Calmante)</li>
-                    <li>Alecrim + Hortelã (Energizante)</li>
-                    <li>Aloe Vera + Bamboo (Refrescante)</li>
+                    <li>Sabonetes Artesanais</li>
+                    <li>Sabonete Líquido</li>
+                    <li>Sabonete de Colher</li>
+                    <li>Geleia de Banho</li> 
+                    <li>Escalda Pés</li>
+                    <li>Velas Aromáticas</li>
                 </ul>
             </div>
             <div class="rules-box avoid">
-                <h3 style="color: var(--danger-color);">⚠️ O Que Evitar</h3>
-                <p>Algumas combinações "brigam" nos sentidos:</p>
+                <h3 style="color: var(--danger-color);">💛 Por Que Escolher a Fio de Aroma?</h3>                
                 <ul>
-                    <li>Mel + Eucalipto</li>
-                    <li>Rosa Mosqueta + Tutti-frutti</li>
-                    <li>Alecrim + Baunilha</li>
-                    <li>Lavanda + Chocolate</li>
+                    <li>Na Fio de Aroma, cada detalhe é pensado para transformar o banho em um momento de cuidado, conforto e bem-estar. Nossos produtos unem beleza, aroma e carinho em fórmulas artesanais feitas para proporcionar uma experiência única.</li><br><br>
+                    <li>🌿 Produção Artesanal de Verdade<br><br> <p>Cada produto é produzido manualmente, em pequenos lotes, garantindo mais cuidado, qualidade e atenção em cada detalhe.</p></li>
+                    <li>✨ Muito Além de um Sabonete<br><br> <p>Nossos produtos não servem apenas para limpar. Eles ajudam a transformar o banho em um momento relaxante, acolhedor e prazeroso.</p></ul>
+                    <li>🛁 Sensação de Pele Macia e Perfumada<br><br> <p>Utilizamos ingredientes que ajudam a manter a hidratação natural da pele, deixando um toque suave, confortável e deliciosamente perfumado após o banho.</p></li>
+                    <li>🌸 Aromas que Abraçam<br><br> <p>As fragrâncias são escolhidas para despertar sensações: relaxar, energizar, confortar e tornar o seu autocuidado ainda mais especial.</p></li>
+                    <li>💖 Ingredientes Selecionados<br><br> <p>Extratos glicólicos, essências, argilas, sementes e ativos escolhidos com carinho para entregar beleza e sensação de cuidado em cada produto.</p></li>
+                    <li>🎁 Feito com Amor em Cada Detalhe<br><br> <p>Da produção à embalagem, tudo é pensado para que você receba não apenas um produto, mas uma experiência artesanal cheia de afeto.</p></li>
+                    <li>🌙 Seu Momento de Autocuidado<br><br> <p>Acreditamos que o banho pode ser uma pausa no meio da correria. Um instante para respirar, relaxar e cuidar de si mesma.</p></li>
+                    <li>♻️ Produção Consciente<br><br> <p>Produzimos com dedicação e cuidado, valorizando o artesanal e evitando produções em massa sem identidade.</p></li>
+                    
+                </div><li>💫 Fio de Aroma <p>Mais do que sabonetes artesanais, uma experiência para sentir na pele.</p></li>
                 </ul>
             </div>
         </div>
@@ -584,6 +601,7 @@
                 <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Maracujá')">Comprar</a>
             </div>
 
+            
             <!-- Produto 8 -->
             <div class="product-card">
                 <img src="imagens/melancia.png" alt="Sabonete Melancia">
