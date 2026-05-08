@@ -217,12 +217,21 @@
         }
 
         .ing-card {
-            background: var(--bg-white);
-            border-radius: 8px;
-            padding: 25px;
+            background: transparent;
+            border-radius: 0;
+            padding: 0;
             text-align: left;
-            border: 1px solid #EAEAEA;
+            border: none;
+            overflow: hidden;
         }
+
+        .ing-card img {
+            width: 105%;
+            height: 480px;          /* ajuste o tamanho aqui */
+            object-fit: cover;     /* mantém proporção e corta o excesso */
+            display: block;
+        }
+
 
         .ing-card h4 {
             font-size: 1.3rem;
@@ -236,9 +245,10 @@
             display: flex;
             gap: 40px;
             max-width: 1200px;
-            margin: 60px auto 0 auto;
+            margin: 150px auto 0 auto; /* aumentei a distância entre as seções */
             flex-wrap: wrap;
         }
+
 
         .rules-box {
             flex: 1;
@@ -453,28 +463,32 @@
             </div>
         </div>
 
-        <h3 style="margin-bottom: 30px; font-size: 2rem;">Ingredientes que Amamos</h3>
+        <h2 style="margin-bottom: 30px; font-size: 2rem;">Ingredientes que Amamos</h2>
         <div class="ingredients-grid">
             <div class="ing-card">
-                <h4>🌼 Camomila</h4>
-                <p><strong>Excelente para:</strong> Peles sensíveis, bebês e efeito calmante.</p>
-                <p><strong>Combina com:</strong> Lavanda, Erva-doce e Chá branco.</p>
+                <img src="imagens/melancia.jpeg" alt="Melancia">
             </div>
+
             <div class="ing-card">
-                <h4>🌿 Alecrim</h4>
-                <p><strong>Excelente para:</strong> Oleosidade, acne e estimular a circulação.</p>
-                <p><strong>Combina com:</strong> Hortelã e Eucalipto (Linha refrescante).</p>
+                <img src="imagens/alecrim-real.jpeg" alt="Alecrim Real">
             </div>
+            
             <div class="ing-card">
-                <h4>🍯 Mel</h4>
-                <p><strong>Excelente para:</strong> Hidratação intensa, maciez e nutrição.</p>
-                <p><strong>Combina com:</strong> Aveia, Baunilha e Leite (Linha conforto).</p>
+                <img src="imagens/mel.jpeg" alt="Mel">
             </div>
+            
             <div class="ing-card">
-                <h4>🌹 Rosa Mosqueta</h4>
-                <p><strong>Excelente para:</strong> Regeneração celular, manchas e pele madura.</p>
-                <p><strong>Combina com:</strong> Rosas, Jasmim e Algodão (Linha sofisticada).</p>
+                <img src="imagens/rosa-mo.jpeg" alt="Rosa Mosqueta">
             </div>
+            
+            <div class="ing-card">
+                <img src="imagens/erva-doce.jpeg" alt="Erva Doce">
+            </div>
+            
+            <div class="ing-card">
+                <img src="imagens/maracuja2.jpeg" alt="Maracujá">
+            </div>
+        
         </div>
 
         <div class="rules-container">
@@ -607,7 +621,7 @@
     <!-- Script WhatsApp -->
     <script>
         function comprarWhatsApp(item) {
-            // COLOQUE SEU NÚMERO AQUI (Ex: 5511999999999)
+            // NÚMERO WHATSAPP (SEM ESPAÇOS, HÍFENS OU PARÊNTESES)
             const numeroWhatsApp = "5522992668115"; 
             let mensagem = "";
 
