@@ -76,36 +76,21 @@
         /* Hero / Banner Principal */
         .hero {
             height: 70vh;
-            background: linear-gradient(rgba(74, 93, 35, 0.6), rgba(74, 93, 35, 0.8)), url('https://images.unsplash.com/photo-1600857062241-98e5dba7f214?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            background-image: url('imagens/banner.jpeg');
+            background-size: cover;
+            background-position: center;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            color: white;
+            color: rgb(255, 255, 255);
             padding: 20px;
         }
-
-        .hero h1 {
-            color: white;
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-        }
-
-.hero p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            max-width: 700px;
-            font-weight: 300;
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
         .btn {
             padding: 15px 35px;
             background-color: var(--accent-color);
-            color: white;
+            color: rgb(255, 255, 255);
             text-decoration: none;
             border-radius: 30px;
             font-weight: 600;
@@ -423,11 +408,8 @@
     </header>
 
     <!-- Banner Principal -->
-    <section id="inicio" class="hero">
-        <h1>Aroma que Transforma</h1>
-        <p>A união perfeita entre os benefícios da natureza e aromas que encantam. Saboaria artesanal feita com afeto e conhecimento.</p>
-        <a href="#guia" class="btn">Conheça nosso Material</a>
-    </section>
+    <section id="inicio" class="hero">         
+        </section>
 
     <!-- Seção do Guia / E-book -->
     <section id="guia" class="ebook-section">
@@ -457,6 +439,7 @@
                 <p>É um extrato vegetal concentrado que traz <strong>propriedades reais</strong> para a pele. Serve para enriquecer o sabonete de forma natural.</p>
                 <br>
                 <p><strong>Benefícios:</strong> Calmante, hidratante, cicatrizante, antioxidante.</p>
+                <p><em>Dica: Normalmente usa-se de 1% a 3% na formulação. Menos é mais!</em></p>
             </div>
             <div class="info-card essence">
                 <h3>A Essência 🌸</h3>
@@ -576,77 +559,75 @@
         <div class="product-grid">
             <!-- Produto 1 -->
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Sabonete Aveia e Mel">
-                <h3>Sabonete Aveia e Mel</h3>
-                <p>Linha Conforto - Hidratação intensa</p>
-                <h4 style="margin: 10px 0; color: var(--accent-color);">R$ 28,00</h4>
-                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Artesanal Aveia e Mel')">Comprar</a>
+                <img src="imagens/argila.jpg" alt="Sabonete Facial">
+                <h3>Sabonete Facial 80g</h3>
+                <p> Desenvolvido com argilas e ativos naturais para auxiliar na limpeza profunda, controle da oleosidade e cuidado delicado da pele facial</p>
+                <h4 style="margin: 10px 0; color: var(--accent-color);">R$ 11,00</h4>
+                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Facial')">Comprar</a>
             </div>
 
             <!-- Produto 2 -->
             <div class="product-card">
-                <img src="imagens/lavanda-removebg-preview.png" alt="Sabonete Lavanda">
-                <h3>Sabonete Lavanda Spa</h3>
-                <p>Linha Relaxante com extrato de Camomila</p>
+                <img src="imagens/massagem.jpg" alt="Sabonete Massageador">
+                <h3>Sabonete Massageador</h3>
+                <p>Une os benefícios do sabonete artesanal a um formato anatômico que auxilia na massagem corporal e transforma o banho em um momento relaxante</p>
                 <h4 style="margin: 10px 0; color: var(--accent-color);">R$ 30,00</h4>
-                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Lavanda e Camomila')">Comprar</a>
+                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Massageador')">Comprar</a>
             </div>
 
             <!-- Produto 3 -->
             <div class="product-card">
-                <img src="imagens/alecrim-removebg-preview.png" alt="Sabonete Alecrim">
-                <h3>Sabonete Alecrim</h3>
-                <p>Linha Energizante para peles oleosas</p>
+                <img src="imagens/artesanal.jpg" alt="Sabonete Artesanal">
+                <h3>Sabonete Artesanal 90 / 100g</h3>
+                <p>Produzido com base glicerinada e extrato glicólico de aveia, proporciona limpeza suave, espuma cremosa e sensação confortável na pele</p>
                 <h4 style="margin: 10px 0; color: var(--accent-color);">R$ 28,00</h4>
-                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Alecrim')">Comprar</a>
+                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Artesanal 90 / 100g')">Comprar</a>
             </div>
              
             <!-- Produto 4 -->
             <div class="product-card">
-                <img src="imagens/alecrim-açafrão-removebg-preview.png" alt="Sabonete Alecrim com Açafrão">
-                <h3>Sabonete Alecrim com Açafrão</h3>
-                <p>Linha Energizante para peles oleosas</p>
+                <img src="imagens/geleia-banho.jpg" alt="Geleia de Banho">
+                <h3>Geleia de Banho 200 / 300ml</h3>
+                <p>Textura divertida e sensorial que promove espuma cremosa, perfumação agradável e um banho refrescante e sofisticado</p>
                 <h4 style="margin: 10px 0; color: var(--accent-color);">R$ 28,00</h4>
-                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Alecrim com Açafrão')">Comprar</a>
+                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Geleia de Banho 200 / 300ml')">Comprar</a>
             </div>
             
             <!-- Produto 5 -->
             <div class="product-card">
-                <img src="imagens/alecrim-sal-removebg-preview.png" alt="Sabonete Alecrim com Sal">
-                <h3>Sabonete Alecrim com Sal</h3>
-                <p>Linha Energizante para peles oleosas</p>
+                <img src="imagens/sabonete-liquido.jpg" alt="Sabonete Líquido">
+                <h3>Sabonete Líquido comum ou perolado 100ml</h3>
+                <p> Limpeza confortável com espuma cremosa e fragrâncias marcantes, deixando a pele limpa, macia e perfumada</p>
                 <h4 style="margin: 10px 0; color: var(--accent-color);">R$ 28,00</h4>
-                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Alecrim com Sal')">Comprar</a>
+                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Líquido comum ou perolado 100ml')">Comprar</a>
             </div>
 
             <!-- Produto 6 -->
             <div class="product-card">
-                <img src="imagens/erva-doce-removebg-preview.png" alt="Sabonete Erva Doce">
-                <h3>Sabonete Erva Doce</h3>
-                <p>Linha Energizante para peles oleosas</p>
+                <img src="imagens/sabonete-colher.jpg" alt="Sabonete de Colher">
+                <h3>Sabonete de Colher 120g</h3>
+                <p>Mousse cremoso com textura leve e aerada que limpa suavemente, proporciona hidratação confortável e transforma o banho em um momento sofisticado e sensorial</p>
                 <h4 style="margin: 10px 0; color: var(--accent-color);">R$ 28,00</h4>
-                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Erva Doce')">Comprar</a>
+                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete de Colher 120g')">Comprar</a>
             </div>
 
             <!-- Produto 7 -->
             <div class="product-card">
-                <img src="imagens/maracujá.jpeg" alt="Sabonete Maracujá">
-                <h3>Sabonete Maracujá</h3>
-                <p>Linha Energizante para peles oleosas</p>
+                <img src="imagens/escalda-pe.jpg" alt="Escalda Pés">
+                <h3>Escalda Pés 40g</h3>
+                <p>Combinação aromática relaxante ideal para aliviar o cansaço e proporcionar um momento de autocuidado e bem-estar</p>
                 <h4 style="margin: 10px 0; color: var(--accent-color);">R$ 28,00</h4>
-                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Maracujá')">Comprar</a>
+                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Escalda Pés 40g')">Comprar</a>
             </div>
 
-            
             <!-- Produto 8 -->
             <div class="product-card">
-                <img src="imagens/melancia.png" alt="Sabonete Melancia">
-                <h3>Sabonete Melancia</h3>
-                <p>Linha Energizante para peles oleosas</p>
+                <img src="imagens/vela-aromatica.jpg" alt="Vela Aromática">
+                <h3>Vela Aromática 100g</h3>
+                <p>Produzida com cera de coco e fragrâncias especiais para perfumar o ambiente e criar uma atmosfera aconchegante e sofisticada</p>
                 <h4 style="margin: 10px 0; color: var(--accent-color);">R$ 28,00</h4>
-                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Sabonete Melancia')">Comprar</a>
-            </div>
-            
+                <a href="#" class="btn-buy" onclick="comprarWhatsApp('Vela Aromática 100g')">Comprar</a>
+            </div>            
         </div>
     </section>
 
