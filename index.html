@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fio de Aroma - Saboaria e Cosmética Artesanal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #4A6741; 
+            --secondary-color: #D4A373; 
+            --bg-color: #FAFAF7; 
+            --text-dark: #333333;
+            --text-light: #666666;
+            --accent-pink: #D9A0A0; 
+            --border-color: #eaeaea;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Lato', sans-serif; background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; scroll-behavior: smooth; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
+
+        header {
+            background-color: #fff; padding: 20px 50px; display: flex; justify-content: space-between;
+            align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100;
+        }
+        .logo { font-size: 28px; color: var(--primary-color); text-decoration: none; display: flex; flex-direction: column; align-items: center; }
+        .logo span { font-family: 'Lato', sans-serif; font-size: 11px; letter-spacing: 2px; color: var(--text-light); text-transform: uppercase; }
+        
+        nav { display: flex; gap: 20px; }
+        nav a { text-decoration: none; color: var(--text-dark); text-transform: uppercase; font-size: 13px; letter-spacing: 1px; transition: color 0.3s; }
+        nav a:hover { color: var(--primary-color); }
+        
+        .cart-icon { font-size: 24px; cursor: pointer; position: relative; color: var(--primary-color); }
+        .cart-count { position: absolute; top: -8px; right: -10px; background-color: var(--accent-pink); color: white; border-radius: 50%; padding: 2px 7px; font-size: 12px; font-weight: bold; }
+
+        .hero { padding: 60px 20px; text-align: center; background: linear-gradient(to bottom, #fff, var(--bg-color)); }
+        .hero h1 { font-size: 42px; margin-bottom: 10px; color: var(--primary-color); }
+        .hero p { font-size: 18px; font-style: italic; color: var(--text-light); margin-bottom: 40px; }
+        .hero-image-container { max-width: 900px; margin: 0 auto; border-radius: 15px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .hero-image-container img { width: 100%; display: block; }
+
+        .info-section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; }
+        .info-title { text-align: center; font-size: 32px; margin-bottom: 50px; color: var(--primary-color); }
+        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .info-card { background: #fff; padding: 30px; border-radius: 10px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.03); border-top: 4px solid var(--accent-pink); }
+        .info-card i { font-size: 40px; color: var(--primary-color); margin-bottom: 20px; }
+
+        .store-section { padding: 60px 20px; background-color: #fff; min-height: 500px; }
+        .store-container { max-width: 1200px; margin: 0 auto; }
+        
+        .guide-images-container { max-width: 900px; margin: 0 auto 60px auto; display: flex; flex-direction: column; gap: 30px; }
+        .guide-images-container img { width: 100%; display: block; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.08); }
+
+        .category-block { margin-bottom: 70px; }
+        .category-title { font-size: 28px; color: var(--primary-color); margin-bottom: 30px; padding-bottom: 10px; border-bottom: 2px solid var(--border-color); display: flex; align-items: center; gap: 15px; }
+
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
+        .product-card { border: 1px solid var(--border-color); background-color: #fff; border-radius: 10px; padding: 25px 20px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
+
+        .product-icon { width: 80px; height: 80px; background-color: var(--bg-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; font-size: 32px; color: var(--secondary-color); }
+        .product-name { font-size: 18px; margin-bottom: 10px; flex-grow: 1; }
+        .product-desc { font-size: 13px; color: var(--text-light); margin-bottom: 15px; line-height: 1.4; }
+        .product-price { font-size: 20px; font-weight: bold; color: var(--primary-color); margin-bottom: 20px; }
+        .price-prefix { font-size: 12px; color: var(--text-light); font-weight: normal; display: block; margin-bottom: -5px; }
+
+        .btn-add { background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); padding: 10px 20px; border-radius: 25px; cursor: pointer; font-family: 'Lato', sans-serif; font-weight: bold; transition: all 0.3s; width: 100%; }
+        .btn-add:hover { background-color: var(--primary-color); color: #fff; }
+
+        /* Modal */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; display: none; justify-content: center; align-items: center; backdrop-filter: blur(3px); }
+        .modal-overlay.open { display: flex; }
+        .modal-content { background: #fff; width: 90%; max-width: 450px; border-radius: 15px; padding: 25px; position: relative; max-height: 90vh; overflow-y: auto; }
+        .modal-close { position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer; color: var(--text-light); }
+        
+        .modal-header { text-align: center; margin-bottom: 20px; }
+        .modal-title { font-size: 22px; color: var(--primary-color); margin-bottom: 5px; }
+        
+        .modal-media-container { width: 100%; height: 200px; border-radius: 10px; overflow: hidden; background: var(--bg-color); display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
+        .modal-media-container img { width: 100%; height: 100%; object-fit: cover; }
+        .modal-media-container i { font-size: 60px; color: var(--secondary-color); }
+        
+        .variant-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+        .variant-item { border: 2px solid var(--border-color); padding: 12px 15px; border-radius: 10px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s; }
+        .variant-item:hover { border-color: var(--secondary-color); }
+        .variant-item.selected { border-color: var(--primary-color); background-color: #f4f9f4; }
+        .variant-name { font-weight: bold; font-size: 14px; color: var(--text-dark); }
+        .variant-price { color: var(--primary-color); font-weight: bold; }
+        
+        /* Controles de Quantidade no Modal */
+        .quantity-selector { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 20px; }
+        .qty-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid var(--primary-color); background-color: transparent; color: var(--primary-color); font-size: 18px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: 0.2s; }
+        .qty-btn:hover { background-color: var(--primary-color); color: #fff; }
+        .qty-number { font-size: 18px; font-weight: bold; min-width: 30px; text-align: center; }
+
+        .btn-confirm { background-color: var(--primary-color); color: #fff; width: 100%; padding: 15px; border: none; border-radius: 25px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+        .btn-confirm:hover { background-color: #385131; }
+
+        /* Carrinho Lateral */
+        .cart-sidebar { position: fixed; top: 0; right: -400px; width: 400px; max-width: 100%; height: 100vh; background: #fff; box-shadow: -5px 0 15px rgba(0,0,0,0.1); z-index: 1000; transition: right 0.3s ease; display: flex; flex-direction: column; padding: 20px; }
+        .cart-sidebar.open { right: 0; }
+        .cart-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; }
+        .close-cart { cursor: pointer; font-size: 24px; color: var(--text-light); }
+        .cart-items { flex-grow: 1; overflow-y: auto; }
+        
+        .cart-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed var(--border-color); }
+        .cart-item-info { flex-grow: 1; }
+        .cart-item-info h4 { font-size: 14px; margin-bottom: 2px; color: var(--text-dark); line-height: 1.2; }
+        .cart-item-info span { font-size: 11px; color: #888; display: block; margin-bottom: 5px; }
+        
+        /* Controles de Qtde dentro do carrinho */
+        .cart-qty-controls { display: flex; align-items: center; gap: 10px; margin-top: 5px; }
+        .cart-qty-btn { background: #eee; border: none; border-radius: 4px; width: 22px; height: 22px; cursor: pointer; font-weight: bold; color: var(--text-dark); display: flex; justify-content: center; align-items: center; }
+        .cart-qty-btn:hover { background: #ddd; }
+        .cart-qty-number { font-size: 13px; font-weight: bold; width: 15px; text-align: center; }
+
+        .cart-item-price-box { text-align: right; min-width: 80px; }
+        .cart-item-price { color: var(--primary-color); font-weight: bold; font-size: 15px; margin-bottom: 5px;}
+        .cart-item-remove { color: #d9534f; cursor: pointer; font-size: 11px; text-decoration: underline; }
+        
+        .cart-footer { border-top: 2px solid var(--border-color); padding-top: 20px; }
+        .cart-total { display: flex; justify-content: space-between; font-size: 20px; font-weight: bold; margin-bottom: 20px; color: var(--primary-color); }
+        .btn-whatsapp { display: block; width: 100%; background-color: #25D366; color: white; text-align: center; padding: 15px; border-radius: 25px; text-decoration: none; font-weight: bold; font-size: 16px; border: none; cursor: pointer; }
+        
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999; display: none; backdrop-filter: blur(2px); }
+        .overlay.open { display: block; }
+
+        footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 40px 20px; }
+        .social-links a { color: #fff; font-size: 24px; margin: 0 10px; text-decoration: none; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; padding: 15px; gap: 15px; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+    <header>
+        <a href="#" class="logo">Fio de Aroma<span>Cosmética Artesanal</span></a>
+        <nav>
+            <a href="#beneficios">A Essência</a>
+            <a href="#CorpoBanho">Banho</a>
+            <a href="#Perfumaria">Perfumaria</a>
+            <a href="#Casa">Casa</a>
+            <a href="#Presentes">Presentes</a>
+        </nav>
+        <div class="cart-icon" onclick="toggleCart()">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count" id="cart-count">0</span>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Mais que limpar, cuidar.</h1>
+        <p>A força da natureza através dos extratos glicólicos em um cuidado diário para sua pele.</p>
+        <div class="hero-image-container">
+            <img src="images/input_file_0.jpeg" alt="Benefícios dos Extratos Glicólicos">
+        </div>
+    </section>
+
+    <section id="beneficios" class="info-section">
+        <h2 class="info-title">Nossa Arte e Cuidado</h2>
+        <div class="info-grid">
+            <div class="info-card"><i class="fas fa-leaf"></i><h3>Ativos Naturais</h3><p>Formulamos com extratos poderosos de Aloe Vera, Aveia e Calêndula.</p></div>
+            <div class="info-card"><i class="fas fa-pump-soap"></i><h3>Rotina Completa</h3><p>Do banho revitalizante à perfumaria corporal e harmonização do seu lar.</p></div>
+            <div class="info-card"><i class="fas fa-hand-holding-heart"></i><h3>Feito à Mão com Amor</h3><p>Cada produto é fabricado artesanalmente, com atenção aos detalhes.</p></div>
+        </div>
+    </section>
+
+    <section class="store-section">
+        <h2 class="info-title" style="margin-bottom: 20px;">Nosso Catálogo</h2>
+        <div class="guide-images-container">
+            <img src="images/guiaSabonete.jpg" alt="Guia de Sabonetes 1">
+            <img src="images/guiaSabonete2.jpg" alt="Guia de Sabonetes 2">
+        </div>
+        <div class="store-container" id="store-container"></div>
+    </section>
+
+    <!-- Modal de Opções do Produto (Agora com Quantidade) -->
+    <div class="modal-overlay" id="modal-produto" onclick="fecharModalSeClicarFora(event)">
+        <div class="modal-content">
+            <span class="modal-close" onclick="fecharModal()"><i class="fas fa-times"></i></span>
+            
+            <div class="modal-header">
+                <h3 class="modal-title" id="modal-titulo">Nome do Produto</h3>
+                <p class="product-desc" id="modal-desc">Descrição curta</p>
+            </div>
+            
+            <div class="modal-media-container" id="modal-midia"></div>
+            
+            <p style="margin-bottom: 10px; font-weight: bold; font-size: 14px; color: var(--text-dark);">Escolha a opção:</p>
+            <div class="variant-list" id="modal-variantes"></div>
+            
+            <!-- Controle de Quantidade Adicionado -->
+            <div class="quantity-selector">
+                <button class="qty-btn" onclick="alterarQuantidadeModal(-1)"><i class="fas fa-minus"></i></button>
+                <span class="qty-number" id="modal-quantidade">1</span>
+                <button class="qty-btn" onclick="alterarQuantidadeModal(1)"><i class="fas fa-plus"></i></button>
+            </div>
+            
+            <button class="btn-confirm" id="btn-add-modal" onclick="adicionarVarianteSelecionada()">Adicionar (R$ 0,00)</button>
+        </div>
+    </div>
+
+    <!-- Carrinho Lateral (Agora com Quantidade) -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Seu Carrinho</h2>
+            <span class="close-cart" onclick="toggleCart()"><i class="fas fa-times"></i></span>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="cart-total"><span>Total:</span><span id="cart-total-price">R$ 0,00</span></div>
+            <button class="btn-whatsapp" onclick="checkoutWhatsApp()"><i class="fab fa-whatsapp"></i> Enviar Pedido</button>
+        </div>
+    </div>
+
+    <footer>
+        <h3 style="font-family: 'Playfair Display', serif; font-size: 24px;">Fio de Aroma</h3>
+        <p>Cosméticos Artesanais - Feito à mão com amor ♥</p>
+        <div class="social-links">
+            <a href="https://instagram.com/fiodearoma" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5522992668115" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        // BANCO DE PRODUTOS
+        const produtos = [
+            { 
+                id: 101, cat: "CorpoBanho", nome: "Sabonete Rosa Mosqueta", 
+                desc: "Floral delicado e elegante. Hidratação, maciez e conforto. (Aloe Vera + Aveia)", icon: "fa-spa",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/rosaMosqueta.jpg" },                    
+                    { idVar: "v2", nome: "Massageador Sem Bucha (130g)", preco: 12.99, imagem: "images/rosaMosqueta.jpg" },
+                    { idVar: "v3", nome: "Massageador Com Bucha (130g)", preco: 13.99, imagem: "images/rosaMosqueta.jpg" }
+                ]
+            },
+            { 
+                id: 102, cat: "CorpoBanho", nome: "Sabonete Alecrim", 
+                desc: "Herbal mentolado. Revitalização e hidratação. (Alecrim + Aloe Vera)", icon: "fa-leaf",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 20.00, imagem: "" },
+                    { idVar: "v2", nome: "Massageador Sem Bucha (130g)", preco: 28.00, imagem: "" },
+                    { idVar: "v3", nome: "Massageador Com Bucha (130g)", preco: 13.99, imagem: "images/alecrim.jpg" }
+                ]
+            },
+            { 
+                id: 103, cat: "CorpoBanho", nome: "Sabonete de Argilas Específicas", 
+                desc: "Tratamento facial e corporal intenso. Escolha a sua argila.", icon: "fa-star-of-life",
+                variantes: [
+                    { idVar: "v1", nome: "Argila Branca (Pele Sensível)", preco: 18.00, imagem: "" },
+                    { idVar: "v2", nome: "Argila Verde (Pele Oleosa)", preco: 18.00, imagem: "" },
+                    { idVar: "v3", nome: "Enxofre + Argila Branca + Açafrão (Massageador)", preco: 35.00, imagem: "" }
+                ]
+            },
+            { 
+                id: 104, cat: "CorpoBanho", nome: "Sabonete Líquido & Geleias", 
+                desc: "Cuidado delicado e cheiroso para o banho ou lavabo.", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Sabonete Líquido (100ml)", preco: 30.00, imagem: "" },
+                    { idVar: "v2", nome: "Geleia de Banho (200ml)", preco: 45.00, imagem: "" }
+                ]
+            },
+            { 
+                id: 201, cat: "Perfumaria", nome: "Body Splash & Perfume", 
+                desc: "Prolongue a sensação do banho com nossas fragrâncias.", icon: "fa-spray-can",
+                variantes: [
+                    { idVar: "v1", nome: "Body Splash (Colônia)", preco: 55.00, imagem: "" },
+                    { idVar: "v2", nome: "Perfume de Cabelo", preco: 40.00, imagem: "" }
+                ]
+            },
+            { 
+                id: 301, cat: "Infantil", nome: "Linha Infantil", 
+                desc: "Fórmulas ultra suaves pensadas para a pele delicada dos pequenos.", icon: "fa-child",
+                variantes: [
+                    { idVar: "v1", nome: "Sabonete Infantil Padrão", preco: 22.00, imagem: "" }
+                ]
+            },
+            { 
+                id: 401, cat: "Casa", nome: "Aromas para Casa", 
+                desc: "Perfume contínuo e elegante para decorar e harmonizar ambientes.", icon: "fa-house-chimney",
+                variantes: [
+                    { idVar: "v1", nome: "Home Spray", preco: 48.00, imagem: "" },
+                    { idVar: "v2", nome: "Aromatizador de Varetas", preco: 65.00, imagem: "" },
+                    { idVar: "v3", nome: "Água de Tecidos", preco: 42.00, imagem: "" },
+                    { idVar: "v4", nome: "Vela Artesanal", preco: 55.00, imagem: "" }
+                ]
+            },
+            { 
+                id: 501, cat: "Presentes", nome: "Kits & Lembrancinhas", 
+                desc: "Caixas montadas com carinho para surpreender e presentear.", icon: "fa-gift",
+                variantes: [
+                    { idVar: "v1", nome: "Lembrancinha Padrão", preco: 15.00, imagem: "" },
+                    { idVar: "v2", nome: "Kit Presente Completo", preco: 85.00, imagem: "" }
+                ]
+            }
+        ];
+
+        const categoriasLayout = [
+            { id: "CorpoBanho", titulo: "1. Corpo & Banho", icone: "fa-bath" },
+            { id: "Perfumaria", titulo: "2. Perfumaria & Cuidados", icone: "fa-spray-can-sparkles" },
+            { id: "Infantil", titulo: "3. Linha Infantil", icone: "fa-baby-carriage" },
+            { id: "Casa", titulo: "4. Aromas para Casa", icone: "fa-house-chimney" },
+            { id: "Presentes", titulo: "5. Presentes & Lembrancinhas", icone: "fa-gift" }
+        ];
+
+        let carrinho = [];
+        let produtoSendoVisto = null; 
+        let varianteSelecionada = null; 
+        let qtdeSelecionada = 1; // Variável nova para a quantidade no modal
+
+        document.addEventListener("DOMContentLoaded", function() {
+            gerarCatalogo();
+        });
+
+        function gerarCatalogo() {
+            const container = document.getElementById('store-container');
+            if (!container) return;
+
+            let htmlFinal = "";
+
+            categoriasLayout.forEach(categoria => {
+                const produtosDaCategoria = produtos.filter(p => p.cat === categoria.id);
+                
+                if (produtosDaCategoria.length > 0) {
+                    htmlFinal += `<div class="category-block" id="${categoria.id}">
+                        <h3 class="category-title"><i class="fas ${categoria.icone}"></i> ${categoria.titulo}</h3>
+                        <div class="product-grid">`;
+
+                    produtosDaCategoria.forEach(prod => {
+                        let menorPreco = Math.min(...prod.variantes.map(v => v.preco));
+                        let precoExibicao = `R$ ${menorPreco.toFixed(2).replace('.', ',')}`;
+                        let prefixo = prod.variantes.length > 1 ? '<span class="price-prefix">A partir de</span>' : '';
+                        
+                        let varComImg = prod.variantes.find(v => v.imagem !== "");
+                        let midiaVisual = varComImg 
+                            ? `<img src="${varComImg.imagem}" alt="${prod.nome}" style="width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">`
+                            : `<div class="product-icon"><i class="fas ${prod.icon}"></i></div>`;
+
+                        htmlFinal += `
+                            <div class="product-card">
+                                ${midiaVisual}
+                                <h4 class="product-name">${prod.nome}</h4>
+                                <p class="product-desc">${prod.desc}</p>
+                                <div class="product-price">${prefixo} ${precoExibicao}</div>
+                                <button class="btn-add" onclick="abrirModalProduto(${prod.id})">
+                                    ${prod.variantes.length > 1 ? "Ver Opções" : "Adicionar"}
+                                </button>
+                            </div>
+                        `;
+                    });
+                    htmlFinal += `</div></div>`;
+                }
+            });
+            container.innerHTML = htmlFinal;
+        }
+
+        // MODAL E QUANTIDADE
+        function abrirModalProduto(idProd) {
+            const prod = produtos.find(p => p.id === idProd);
+            produtoSendoVisto = prod;
+            varianteSelecionada = prod.variantes[0].idVar; 
+            qtdeSelecionada = 1; // Reseta a quantidade para 1 sempre que abrir o modal
+
+            document.getElementById('modal-titulo').innerText = prod.nome;
+            document.getElementById('modal-desc').innerText = prod.desc;
+            
+            desenharOpcoesDoModal();
+            atualizarMidiaDoModal();
+            atualizarTotalModal();
+
+            document.getElementById('modal-produto').classList.add('open');
+        }
+
+        function fecharModal() {
+            document.getElementById('modal-produto').classList.remove('open');
+        }
+
+        function fecharModalSeClicarFora(event) {
+            if (event.target.id === 'modal-produto') fecharModal();
+        }
+
+        function desenharOpcoesDoModal() {
+            const divVariantes = document.getElementById('modal-variantes');
+            let htmlOpcoes = "";
+
+            produtoSendoVisto.variantes.forEach(v => {
+                let isSelected = (v.idVar === varianteSelecionada) ? 'selected' : '';
+                htmlOpcoes += `
+                    <div class="variant-item ${isSelected}" onclick="selecionarVariante('${v.idVar}')">
+                        <span class="variant-name">${v.nome}</span>
+                        <span class="variant-price">R$ ${v.preco.toFixed(2).replace('.', ',')}</span>
+                    </div>
+                `;
+            });
+
+            divVariantes.innerHTML = htmlOpcoes;
+        }
+
+        function selecionarVariante(idVar) {
+            varianteSelecionada = idVar;
+            desenharOpcoesDoModal();
+            atualizarMidiaDoModal();
+            atualizarTotalModal(); // Atualiza o preço no botão principal
+        }
+
+        function atualizarMidiaDoModal() {
+            const divMidia = document.getElementById('modal-midia');
+            const varAtual = produtoSendoVisto.variantes.find(v => v.idVar === varianteSelecionada);
+            
+            if (varAtual.imagem && varAtual.imagem !== "") {
+                divMidia.innerHTML = `<img src="${varAtual.imagem}" alt="${varAtual.nome}">`;
+            } else {
+                divMidia.innerHTML = `<i class="fas ${produtoSendoVisto.icon}"></i>`;
+            }
+        }
+
+        function alterarQuantidadeModal(delta) {
+            qtdeSelecionada += delta;
+            if (qtdeSelecionada < 1) qtdeSelecionada = 1; // Não deixa ser menor que 1
+            atualizarTotalModal();
+        }
+
+        function atualizarTotalModal() {
+            document.getElementById('modal-quantidade').innerText = qtdeSelecionada;
+            
+            const varAtual = produtoSendoVisto.variantes.find(v => v.idVar === varianteSelecionada);
+            const total = varAtual.preco * qtdeSelecionada;
+            
+            document.getElementById('btn-add-modal').innerText = `Adicionar - R$ ${total.toFixed(2).replace('.', ',')}`;
+        }
+
+        // CARRINHO DE COMPRAS
+        function adicionarVarianteSelecionada() {
+            const varObj = produtoSendoVisto.variantes.find(v => v.idVar === varianteSelecionada);
+            const carrinhoId = `${produtoSendoVisto.id}-${varObj.idVar}`;
+            const itemExistente = carrinho.find(item => item.carrinhoId === carrinhoId);
+
+            if (itemExistente) {
+                itemExistente.quantidade += qtdeSelecionada;
+            } else {
+                carrinho.push({
+                    carrinhoId: carrinhoId,
+                    nomeProduto: produtoSendoVisto.nome,
+                    nomeVariante: varObj.nome,
+                    preco: varObj.preco,
+                    quantidade: qtdeSelecionada // Adiciona a quantidade escolhida
+                });
+            }
+
+            atualizarInterfaceCarrinho();
+            fecharModal();
+            document.getElementById('cart-sidebar').classList.add('open');
+            document.getElementById('overlay').classList.add('open');
+        }
+
+        function toggleCart() {
+            document.getElementById('cart-sidebar').classList.toggle('open');
+            document.getElementById('overlay').classList.toggle('open');
+        }
+
+        function alterarQtdeCarrinho(carrinhoId, delta) {
+            const item = carrinho.find(i => i.carrinhoId === carrinhoId);
+            if (item) {
+                item.quantidade += delta;
+                if (item.quantidade <= 0) {
+                    removerDoCarrinho(carrinhoId); // Se zerar, remove do carrinho
+                } else {
+                    atualizarInterfaceCarrinho();
+                }
+            }
+        }
+
+        function removerDoCarrinho(carrinhoId) {
+            carrinho = carrinho.filter(item => item.carrinhoId !== carrinhoId);
+            atualizarInterfaceCarrinho();
+        }
+
+        function atualizarInterfaceCarrinho() {
+            const divItens = document.getElementById('cart-items');
+            const labelCount = document.getElementById('cart-count');
+            const labelTotal = document.getElementById('cart-total-price');
+
+            divItens.innerHTML = '';
+            let somaTotal = 0;
+            let quantidadeTotal = 0;
+
+            if (carrinho.length === 0) {
+                divItens.innerHTML = '<p style="text-align:center; color:#999; margin-top:30px;">Seu carrinho está vazio.</p>';
+            }
+
+            carrinho.forEach(item => {
+                const subtotal = item.preco * item.quantidade;
+                somaTotal += subtotal;
+                quantidadeTotal += item.quantidade;
+
+                divItens.innerHTML += `
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <h4>${item.nomeProduto}</h4>
+                            <span>Opção: ${item.nomeVariante}</span>
+                            
+                            <!-- Botões de + e - dentro do Carrinho -->
+                            <div class="cart-qty-controls">
+                                <button class="cart-qty-btn" onclick="alterarQtdeCarrinho('${item.carrinhoId}', -1)">-</button>
+                                <span class="cart-qty-number">${item.quantidade}</span>
+                                <button class="cart-qty-btn" onclick="alterarQtdeCarrinho('${item.carrinhoId}', 1)">+</button>
+                            </div>
+                        </div>
+
+                        <div class="cart-item-price-box">
+                            <div class="cart-item-price">R$ ${subtotal.toFixed(2).replace('.', ',')}</div>
+                            <span class="cart-item-remove" onclick="removerDoCarrinho('${item.carrinhoId}')">Remover</span>
+                        </div>
+                    </div>
+                `;
+            });
+
+            labelCount.innerText = quantidadeTotal;
+            labelTotal.innerText = `R$ ${somaTotal.toFixed(2).replace('.', ',')}`;
+        }
+
+        function checkoutWhatsApp() {
+            if (carrinho.length === 0) {
+                alert("Adicione pelo menos um produto ao carrinho antes de finalizar.");
+                return;
+            }
+
+            let mensagem = "Olá, Fio de Aroma! ✨\nGostaria de fazer o seguinte pedido:\n\n";
+            let valorFinal = 0;
+
+            carrinho.forEach(item => {
+                let sub = item.preco * item.quantidade;
+                mensagem += `▪ *${item.quantidade}x ${item.nomeProduto}*\n  ↳ ${item.nomeVariante}\n  R$ ${sub.toFixed(2).replace('.', ',')}\n\n`;
+                valorFinal += sub;
+            });
+
+            mensagem += `*TOTAL ESTIMADO: R$ ${valorFinal.toFixed(2).replace('.', ',')}*\n\n`;
+            mensagem += "Podemos verificar as formas de pagamento e entrega?";
+
+            const urlEncoded = encodeURIComponent(mensagem);
+            window.open(`https://api.whatsapp.com/send?phone=5522992668115&text=${urlEncoded}`, '_blank');
+        }
+    </script>
+</body>
+</html>
