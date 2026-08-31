@@ -70,7 +70,6 @@
         .btn-add { background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); padding: 10px 20px; border-radius: 25px; cursor: pointer; font-family: 'Lato', sans-serif; font-weight: bold; transition: all 0.3s; width: 100%; }
         .btn-add:hover { background-color: var(--primary-color); color: #fff; }
 
-        /* Modal */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; display: none; justify-content: center; align-items: center; backdrop-filter: blur(3px); }
         .modal-overlay.open { display: flex; }
         .modal-content { background: #fff; width: 90%; max-width: 450px; border-radius: 15px; padding: 25px; position: relative; max-height: 90vh; overflow-y: auto; }
@@ -90,7 +89,6 @@
         .variant-name { font-weight: bold; font-size: 14px; color: var(--text-dark); }
         .variant-price { color: var(--primary-color); font-weight: bold; }
         
-        /* Controles de Quantidade no Modal */
         .quantity-selector { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 20px; }
         .qty-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid var(--primary-color); background-color: transparent; color: var(--primary-color); font-size: 18px; font-weight: bold; cursor: pointer; display: flex; justify-content: center; align-items: center; transition: 0.2s; }
         .qty-btn:hover { background-color: var(--primary-color); color: #fff; }
@@ -99,7 +97,6 @@
         .btn-confirm { background-color: var(--primary-color); color: #fff; width: 100%; padding: 15px; border: none; border-radius: 25px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s; }
         .btn-confirm:hover { background-color: #385131; }
 
-        /* Carrinho Lateral */
         .cart-sidebar { position: fixed; top: 0; right: -400px; width: 400px; max-width: 100%; height: 100vh; background: #fff; box-shadow: -5px 0 15px rgba(0,0,0,0.1); z-index: 1000; transition: right 0.3s ease; display: flex; flex-direction: column; padding: 20px; }
         .cart-sidebar.open { right: 0; }
         .cart-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; }
@@ -111,7 +108,6 @@
         .cart-item-info h4 { font-size: 14px; margin-bottom: 2px; color: var(--text-dark); line-height: 1.2; }
         .cart-item-info span { font-size: 11px; color: #888; display: block; margin-bottom: 5px; }
         
-        /* Controles de Qtde dentro do carrinho */
         .cart-qty-controls { display: flex; align-items: center; gap: 10px; margin-top: 5px; }
         .cart-qty-btn { background: #eee; border: none; border-radius: 4px; width: 22px; height: 22px; cursor: pointer; font-weight: bold; color: var(--text-dark); display: flex; justify-content: center; align-items: center; }
         .cart-qty-btn:hover { background: #ddd; }
@@ -147,6 +143,7 @@
             <a href="#beneficios">A Essência</a>
             <a href="#CorpoBanho">Banho</a>
             <a href="#Perfumaria">Perfumaria</a>
+            <a href="#Infantil">Infantil</a>
             <a href="#Casa">Casa</a>
             <a href="#Presentes">Presentes</a>
         </nav>
@@ -182,7 +179,6 @@
         <div class="store-container" id="store-container"></div>
     </section>
 
-    <!-- Modal de Opções do Produto (Agora com Quantidade) -->
     <div class="modal-overlay" id="modal-produto" onclick="fecharModalSeClicarFora(event)">
         <div class="modal-content">
             <span class="modal-close" onclick="fecharModal()"><i class="fas fa-times"></i></span>
@@ -197,7 +193,6 @@
             <p style="margin-bottom: 10px; font-weight: bold; font-size: 14px; color: var(--text-dark);">Escolha a opção:</p>
             <div class="variant-list" id="modal-variantes"></div>
             
-            <!-- Controle de Quantidade Adicionado -->
             <div class="quantity-selector">
                 <button class="qty-btn" onclick="alterarQuantidadeModal(-1)"><i class="fas fa-minus"></i></button>
                 <span class="qty-number" id="modal-quantidade">1</span>
@@ -208,7 +203,6 @@
         </div>
     </div>
 
-    <!-- Carrinho Lateral (Agora com Quantidade) -->
     <div class="cart-sidebar" id="cart-sidebar">
         <div class="cart-header">
             <h2>Seu Carrinho</h2>
@@ -231,41 +225,167 @@
     </footer>
 
     <script>
-        // BANCO DE PRODUTOS
         const produtos = [
             { 
-                id: 101, cat: "CorpoBanho", nome: "Sabonete Rosa Mosqueta", 
-                desc: "Floral delicado e elegante. Hidratação, maciez e conforto. (Aloe Vera + Aveia)", icon: "fa-spa",
+                id: 101, cat: "CorpoBanho", nome: "Rosa Mosqueta", 
+                desc: "<u>Floral delicado e elegante</u> <br><u>Hidratação, maciez e conforto</u></br> (Aloe Vera + Aveia)", icon: "fa-spa",
                 variantes: [
-                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/rosaMosqueta.jpg" },                    
-                    { idVar: "v2", nome: "Massageador Sem Bucha (130g)", preco: 12.99, imagem: "images/rosaMosqueta.jpg" },
-                    { idVar: "v3", nome: "Massageador Com Bucha (130g)", preco: 13.99, imagem: "images/rosaMosqueta.jpg" }
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/rosa-mosqueta.jpg" },                    
+                    { idVar: "v2", nome: "Massageador sem bucha (130g)", preco: 12.99, imagem: "images/rosa-mosqueta.jpg" },
+                    { idVar: "v3", nome: "Massageador com bucha (130g)", preco: 13.99, imagem: "images/rosa-mosqueta.jpg" }
                 ]
             },
             { 
-                id: 102, cat: "CorpoBanho", nome: "Sabonete Alecrim", 
-                desc: "Herbal mentolado. Revitalização e hidratação. (Alecrim + Aloe Vera)", icon: "fa-leaf",
+                id: 102, cat: "CorpoBanho", nome: "Alecrim", 
+                desc: "<u>Herbal mentolado</u> <br><u>Revitalização e hidratação</u></br> (Alecrim + Aloe Vera)", icon: "fa-leaf",
                 variantes: [
-                    { idVar: "v1", nome: "Normal (90g)", preco: 20.00, imagem: "" },
-                    { idVar: "v2", nome: "Massageador Sem Bucha (130g)", preco: 28.00, imagem: "" },
-                    { idVar: "v3", nome: "Massageador Com Bucha (130g)", preco: 13.99, imagem: "images/alecrim.jpg" }
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/alecrim.jpg" },
+                    { idVar: "v2", nome: "Massageador sem bucha (130g)", preco: 12.99, imagem: "images/alecrim.jpg" },
+                    { idVar: "v3", nome: "Massageador com bucha (130g)", preco: 13.99, imagem: "images/alecrim.jpg" }
                 ]
             },
             { 
-                id: 103, cat: "CorpoBanho", nome: "Sabonete de Argilas Específicas", 
-                desc: "Tratamento facial e corporal intenso. Escolha a sua argila.", icon: "fa-star-of-life",
+                id: 103, cat: "CorpoBanho", nome: "Alecrim Blanc", 
+                desc: "<u>Herbal fresco, limpo e sofisticado</u> <br><u>Revitalização e hidratação</u></br> (Alecrim + Aloe Vera)", icon: "fa-leaf",
                 variantes: [
-                    { idVar: "v1", nome: "Argila Branca (Pele Sensível)", preco: 18.00, imagem: "" },
-                    { idVar: "v2", nome: "Argila Verde (Pele Oleosa)", preco: 18.00, imagem: "" },
-                    { idVar: "v3", nome: "Enxofre + Argila Branca + Açafrão (Massageador)", preco: 35.00, imagem: "" }
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/alecrim-blanc.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/alecrim-blanc.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/alecrim-blanc.jpg" }
+                ]
+            },
+  { 
+                id: 104, cat: "CorpoBanho", nome: "Algodão", 
+                desc: "<u>Limpo, macio e confortável</u> <br><u>Maciez e suavidade</u></br> (Aveia + Camomila)", icon: "fa-star-of-life",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/algodao.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/algodao.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/algodao.jpg" }
                 ]
             },
             { 
-                id: 104, cat: "CorpoBanho", nome: "Sabonete Líquido & Geleias", 
-                desc: "Cuidado delicado e cheiroso para o banho ou lavabo.", icon: "fa-bottle-droplet",
+                id: 105, cat: "CorpoBanho", nome: "Bergamota", 
+                desc: "<u>Cítrico, elegante e fresco</u> <br><u>Revitalização e hidratação</u></br> (Alecrim + Aloe Vera)", icon: "fa-bottle-droplet",
                 variantes: [
-                    { idVar: "v1", nome: "Sabonete Líquido (100ml)", preco: 30.00, imagem: "" },
-                    { idVar: "v2", nome: "Geleia de Banho (200ml)", preco: 45.00, imagem: "" }
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/bergamota.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/bergamota.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/bergamota.jpg" }
+                ]
+            },
+            { 
+                id: 106, cat: "CorpoBanho", nome: "Camomila", 
+                desc: "<u>Cuidado delicado e cheiroso</u> <br><u>para o banho ou lavabo</u></br> (Camomila + Aloe Vera)", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/camomila.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/camomila.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/camomila.jpg" }
+                ]
+            },
+            { 
+                id: 107, cat: "CorpoBanho", nome: "Canela", 
+                desc: "<u>Quente, especiado e marcante</u> <br><u>Maciez e hidratação</u></br> (Aveia + Aloe Vera)", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/canela.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/canela.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/canela.jpg" }
+                ]
+            },
+            { 
+                id: 108, cat: "CorpoBanho", nome: "Erva Doce", 
+                desc: "<u>Herbal e adocicado e aconchegante</u> <br><u>Suavidade e maciez</u></br> (Camomila + Aloe Vera)", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/erva-doce.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/erva-doce.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/erva-doce.jpg" }
+                ]
+            },         
+            { 
+                id: 109 , cat: "CorpoBanho", nome: "Flor de Laranjeira", 
+                desc: "<u>Verde-cítrico, fresco e limpo</u> <br><u>Conforto e hidratação</u></br> (Calêndula + Aloe Vera)", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/flor-laranjeira.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/flor-laranjeira.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/flor-laranjeira.jpg" }
+                ]
+            },   
+            { 
+                id: 110 , cat: "CorpoBanho", nome: "Lavanda Francesa", 
+                desc: "<u>Floral, aromático e relaxante</u> <br><u>Suavidade, conforto e hidratação</u></br> (Camomila + Aloe Vera)", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/lavanda-francesa.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/lavanda-francesa.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/lavanda-francesa.jpg" }
+                ]
+            },
+            { 
+                id: 111 , cat: "CorpoBanho", nome: "Limão Siciliano", 
+                desc: "<u>Cítrico vivo, limpo e energizante</u> <br><u>Revitalização e hidratação</u></br> (Alecrim + Aloe vera)", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/limao-siciliano.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/limao-siciliano.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/limao-siciliano.jpg" }
+                ]
+            },
+            { 
+                id: 112 , cat: "CorpoBanho", nome: "Macadâmia", 
+                desc: "<u>Cremoso, aconchegante e adocicado</u> <br><u>Maciez e hidratação</u></br> (Aveia + Aloe Vera)", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/macadamia.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/macadamia.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/macadamia.jpg" }
+                ]
+            },
+            { 
+                id: 113 , cat: "CorpoBanho", nome: "Maracujá", 
+                desc: "<u>Tropical, alegre e refrescante</u> <br><u>Suavidade e hidratação</u></br> (Calêndula + Aloe Vera)", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/maracuja.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/maracuja.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/maracuja.jpg" }
+                ]
+            },
+            { 
+                id: 114 , cat: "CorpoBanho", nome: "Melancia", 
+                desc: "<u>Fresco, aquoso e levemente doce</u> <br><u>Suavidade e hidratação</u></br> (Calêndula + Aloe Vera)", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/melancia.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/melancia.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/melancia.jpg" }
+                ]
+            },
+            { 
+                id: 115 , cat: "CorpoBanho", nome: "Morango", 
+                desc: "<u>Frutado doce e suculento</u> <br><u>Maciez e hidratação</u></br> (Calêndula + Aloe Vera)", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/morango.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/morango.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/morango.jpg" }
+                ]
+            },
+            { 
+                id: 116 , cat: "CorpoBanho", nome: "Menta", 
+                desc: "<u>Mentolado, herbal e muito fresco</u>  <br><u>Hidratação e revitalização</u></br> (Aloe Vera + Alecrim)  ", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/menta.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/menta.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/menta.jpg" }
+                ]
+            },
+            { 
+                id: 117 , cat: "CorpoBanho", nome: "Pitaya", 
+                desc: "<u>Frutado leve, doce e fresco</u> <br><u>Hidratação e maciez</u></br> (Aloe Vera + Aveia)  ", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/pitaya.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/pitaya.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/pitaya.jpg" }
+                ]
+            },
+            { 
+                id: 118 , cat: "CorpoBanho", nome: "Zarath", 
+                desc: "<u>Amadeirado intenso e sofisticado</u> <br><u>Revitalização e conforto</u></br> (Alecrim + Aloe Vera)", icon: "fa-bottle-droplet",
+                variantes: [
+                    { idVar: "v1", nome: "Normal (90g)", preco: 10.49, imagem: "images/zarath.jpg" },
+                    { idVar: "v2", nome: "Massageador sem Bucha (130g)", preco: 12.99, imagem: "images/zarath.jpg" },
+                    { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99, imagem: "images/zarath.jpg" }
                 ]
             },
             { 
@@ -304,17 +424,17 @@
         ];
 
         const categoriasLayout = [
-            { id: "CorpoBanho", titulo: "1. Corpo & Banho", icone: "fa-bath" },
-            { id: "Perfumaria", titulo: "2. Perfumaria & Cuidados", icone: "fa-spray-can-sparkles" },
-            { id: "Infantil", titulo: "3. Linha Infantil", icone: "fa-baby-carriage" },
-            { id: "Casa", titulo: "4. Aromas para Casa", icone: "fa-house-chimney" },
-            { id: "Presentes", titulo: "5. Presentes & Lembrancinhas", icone: "fa-gift" }
+            { id: "CorpoBanho", titulo: "Corpo & Banho", icone: "fa-bath" },
+            { id: "Perfumaria", titulo: "Perfumaria & Cuidados", icone: "fa-spray-can-sparkles" },
+            { id: "Infantil", titulo: "Linha Infantil", icone: "fa-baby-carriage" },
+            { id: "Casa", titulo: "Aromas para Casa", icone: "fa-house-chimney" },
+            { id: "Presentes", titulo: "Presentes & Lembrancinhas", icone: "fa-gift" }
         ];
 
         let carrinho = [];
         let produtoSendoVisto = null; 
         let varianteSelecionada = null; 
-        let qtdeSelecionada = 1; // Variável nova para a quantidade no modal
+        let qtdeSelecionada = 1;
 
         document.addEventListener("DOMContentLoaded", function() {
             gerarCatalogo();
@@ -362,15 +482,14 @@
             container.innerHTML = htmlFinal;
         }
 
-        // MODAL E QUANTIDADE
         function abrirModalProduto(idProd) {
             const prod = produtos.find(p => p.id === idProd);
             produtoSendoVisto = prod;
             varianteSelecionada = prod.variantes[0].idVar; 
-            qtdeSelecionada = 1; // Reseta a quantidade para 1 sempre que abrir o modal
+            qtdeSelecionada = 1;
 
-            document.getElementById('modal-titulo').innerText = prod.nome;
-            document.getElementById('modal-desc').innerText = prod.desc;
+            document.getElementById('modal-titulo').innerHTML = prod.nome;
+            document.getElementById('modal-desc').innerHTML = prod.desc;
             
             desenharOpcoesDoModal();
             atualizarMidiaDoModal();
@@ -408,7 +527,7 @@
             varianteSelecionada = idVar;
             desenharOpcoesDoModal();
             atualizarMidiaDoModal();
-            atualizarTotalModal(); // Atualiza o preço no botão principal
+            atualizarTotalModal();
         }
 
         function atualizarMidiaDoModal() {
@@ -424,7 +543,7 @@
 
         function alterarQuantidadeModal(delta) {
             qtdeSelecionada += delta;
-            if (qtdeSelecionada < 1) qtdeSelecionada = 1; // Não deixa ser menor que 1
+            if (qtdeSelecionada < 1) qtdeSelecionada = 1;
             atualizarTotalModal();
         }
 
@@ -437,7 +556,6 @@
             document.getElementById('btn-add-modal').innerText = `Adicionar - R$ ${total.toFixed(2).replace('.', ',')}`;
         }
 
-        // CARRINHO DE COMPRAS
         function adicionarVarianteSelecionada() {
             const varObj = produtoSendoVisto.variantes.find(v => v.idVar === varianteSelecionada);
             const carrinhoId = `${produtoSendoVisto.id}-${varObj.idVar}`;
@@ -451,14 +569,17 @@
                     nomeProduto: produtoSendoVisto.nome,
                     nomeVariante: varObj.nome,
                     preco: varObj.preco,
-                    quantidade: qtdeSelecionada // Adiciona a quantidade escolhida
+                    quantidade: qtdeSelecionada 
                 });
             }
 
             atualizarInterfaceCarrinho();
             fecharModal();
-            document.getElementById('cart-sidebar').classList.add('open');
-            document.getElementById('overlay').classList.add('open');
+            
+            if (window.innerWidth > 768) {
+                document.getElementById('cart-sidebar').classList.add('open');
+                document.getElementById('overlay').classList.add('open');
+            }
         }
 
         function toggleCart() {
@@ -471,7 +592,7 @@
             if (item) {
                 item.quantidade += delta;
                 if (item.quantidade <= 0) {
-                    removerDoCarrinho(carrinhoId); // Se zerar, remove do carrinho
+                    removerDoCarrinho(carrinhoId);
                 } else {
                     atualizarInterfaceCarrinho();
                 }
@@ -506,8 +627,6 @@
                         <div class="cart-item-info">
                             <h4>${item.nomeProduto}</h4>
                             <span>Opção: ${item.nomeVariante}</span>
-                            
-                            <!-- Botões de + e - dentro do Carrinho -->
                             <div class="cart-qty-controls">
                                 <button class="cart-qty-btn" onclick="alterarQtdeCarrinho('${item.carrinhoId}', -1)">-</button>
                                 <span class="cart-qty-number">${item.quantidade}</span>
