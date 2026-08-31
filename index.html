@@ -7,7 +7,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css"> <!-- Se quiser separar o CSS, mas vamos deixar embutido por enquanto -->
-    <style>        
+    <style>     
+    /* ==========================================
+   AJUSTES DO DROPDOWN PARA CELULAR
+   ========================================== */
+@media (max-width: 768px) {
+    .dropdown-content {
+        position: relative; /* Evita que flutue por cima de tudo e quebre a tela */
+        top: 0;
+        width: 100%;
+        margin-top: 10px;
+        box-shadow: none;
+        border: 1px solid var(--border-color);
+    }
+    
+    /* Classe que o JavaScript vai usar para abrir no clique */
+    .dropdown-content.mostrar-mobile {
+        display: block !important;
+    }
+}   
         /* BASE CSS (Igual ao seu) */
         :root { --primary-color: #4A6741; --secondary-color: #D4A373; --bg-color: #FAFAF7; --text-dark: #333333; --text-light: #666666; --accent-pink: #D9A0A0; --border-color: #eaeaea; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
