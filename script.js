@@ -130,3 +130,16 @@ function checkoutWhatsApp() {
     msg += `*TOTAL ESTIMADO: R$ ${valorFinal.toFixed(2).replace('.', ',')}*\n\nPodemos verificar o pagamento?`;
     window.open(`https://api.whatsapp.com/send?phone=5522992668115&text=${encodeURIComponent(msg)}`, '_blank');
 }
+// ==========================================
+// FUNÇÃO PARA ABRIR O SUBMENU NO CELULAR
+// ==========================================
+function toggleMenu(event) {
+    // Verifica se está na tela de celular
+    if (window.innerWidth <= 768) {
+        // Pega o menu que está logo abaixo do link clicado
+        const dropdown = event.currentTarget.nextElementSibling;
+        
+        // Alterna entre mostrar e esconder a classe
+        dropdown.classList.toggle('mostrar-mobile');
+    }
+}
