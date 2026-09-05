@@ -7,104 +7,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* ==========================================
-   AJUSTES DO DROPDOWN PARA CELULAR
-   ========================================== */
-@media (max-width: 768px) {
-    .dropdown-content {
-        position: relative; /* Evita que flutue por cima de tudo e quebre a tela */
-        top: 0;
-        width: 100%;
-        margin-top: 10px;
-        box-shadow: none;
-        border: 1px solid var(--border-color);
-    }
-    
-    /* Classe que o JavaScript vai usar para abrir no clique */
-    .dropdown-content.mostrar-mobile {
-        display: block !important;
-    }
-}
-        /* Estilo para o Título da Subcategoria */
-.subcat-title {
-    font-size: 24px;
-    color: var(--primary-color);
-    margin: 40px 0 20px 0;
-    padding-bottom: 10px;
-    border-bottom: 2px solid var(--border-color);
-    width: 100%;
-}
-        /* BASE CSS */
         :root { --primary-color: #4A6741; --secondary-color: #D4A373; --bg-color: #FAFAF7; --text-dark: #333333; --text-light: #666666; --accent-pink: #D9A0A0; --border-color: #eaeaea; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Lato', sans-serif; background-color: var(--bg-color); color: var(--text-dark); line-height: 1.6; }
-        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 600; }
+        body { font-family: 'Lato', sans-serif; background-color: var(--bg-color); color: var(--text-dark); }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
         
-        /* HEADER (com botão voltar) */
         header { background-color: #fff; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
         .logo { font-size: 28px; color: var(--primary-color); text-decoration: none; display: flex; flex-direction: column; align-items: center; }
         .logo span { font-size: 11px; letter-spacing: 2px; color: var(--text-light); text-transform: uppercase; }
-        .btn-voltar { color: var(--text-dark); text-decoration: none; font-size: 14px; font-weight: bold; }
-        .btn-voltar:hover { color: var(--primary-color); }
-        .cart-icon { font-size: 24px; cursor: pointer; position: relative; color: var(--primary-color); }
-        .cart-count { position: absolute; top: -8px; right: -10px; background-color: var(--accent-pink); color: white; border-radius: 50%; padding: 2px 7px; font-size: 12px; font-weight: bold; }
-
-        /* LOJA E PRODUTOS */
+        
         .store-section { padding: 40px 20px; max-width: 1200px; margin: 0 auto; min-height: 70vh;}
         .page-header { text-align: center; margin-bottom: 40px; }
-        .page-header h1 { font-size: 36px; color: var(--primary-color); margin-bottom: 10px;}
-        .category-banner { width: 100%; max-height: 300px; object-fit: cover; border-radius: 10px; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .page-header h1 { font-size: 36px; color: var(--primary-color); }
+        .category-banner { width: 100%; max-height: 250px; object-fit: cover; border-radius: 15px; margin-top: 20px; margin-bottom: 20px; }
         
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; }
-        .product-card { border: 1px solid var(--border-color); background-color: #fff; border-radius: 10px; padding: 25px 20px; text-align: center; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
-        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
-        .product-image { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
-        .product-icon { width: 80px; height: 80px; background-color: var(--bg-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; font-size: 32px; color: var(--secondary-color); }
+        .subcat-title { font-size: 24px; color: var(--primary-color); margin: 40px 0 20px 0; padding-bottom: 10px; border-bottom: 2px solid var(--border-color); width: 100%; }
+        
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 30px; }
+        .product-card { border: 1px solid var(--border-color); background-color: #fff; border-radius: 10px; padding: 20px; text-align: center; transition: 0.3s; display: flex; flex-direction: column; }
+        .product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .product-image { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
         .product-name { font-size: 18px; margin-bottom: 10px; flex-grow: 1; }
-        .product-desc { font-size: 13px; color: var(--text-light); margin-bottom: 15px; line-height: 1.4; }
-        .product-price { font-size: 20px; font-weight: bold; color: var(--primary-color); margin-bottom: 20px; }
-        .btn-add { background-color: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); padding: 10px 20px; border-radius: 25px; cursor: pointer; font-weight: bold; transition: all 0.3s; width: 100%; }
-        .btn-add:hover { background-color: var(--primary-color); color: #fff; }
+        .product-price { font-size: 20px; font-weight: bold; color: var(--primary-color); margin-bottom: 15px; }
+        .btn-add { background: transparent; border: 2px solid var(--primary-color); color: var(--primary-color); padding: 12px; border-radius: 25px; cursor: pointer; font-weight: bold; width: 100%; transition: 0.3s; text-decoration: none; display: inline-block; text-align: center; font-size: 14px; }
+        .btn-add:hover { background: var(--primary-color); color: #fff; }
 
-        /* MODAL (Estilos mantidos) */
+        /* MODAL COM ROLAGEM */
         .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; display: none; justify-content: center; align-items: center; backdrop-filter: blur(3px); }
         .modal-overlay.open { display: flex; }
-        .modal-content { background: #fff; width: 90%; max-width: 450px; border-radius: 15px; padding: 25px; position: relative; max-height: 90vh; overflow-y: auto; }
-        .modal-close { position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer; }
-        .modal-header { text-align: center; margin-bottom: 20px; }
-        .modal-title { font-size: 22px; color: var(--primary-color); margin-bottom: 5px; }
-        .modal-media-container { width: 100%; height: 250px; border-radius: 10px; overflow: hidden; background: var(--bg-color); display: flex; justify-content: center; align-items: center; margin-bottom: 20px; }
-        .modal-media-container img { width: 100%; height: 100%; object-fit: cover; }
-        .modal-media-container i { font-size: 60px; color: var(--secondary-color); }
-        .variant-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
-        .variant-item { border: 2px solid var(--border-color); padding: 12px 15px; border-radius: 10px; cursor: pointer; display: flex; justify-content: space-between; }
-        .variant-item.selected { border-color: var(--primary-color); background-color: #f4f9f4; }
-        .quantity-selector { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 20px; }
-        .qty-btn { width: 35px; height: 35px; border-radius: 50%; border: 1px solid var(--primary-color); background: transparent; color: var(--primary-color); font-weight: bold; cursor: pointer; }
-        .btn-confirm { background-color: var(--primary-color); color: #fff; width: 100%; padding: 15px; border: none; border-radius: 25px; font-weight: bold; cursor: pointer; }
+        .modal-content { background: #fff; width: 90%; max-width: 450px; border-radius: 15px; padding: 25px; position: relative; max-height: 85vh; overflow-y: auto; }
+        .btn-fechar-modal { position: sticky; top: -10px; float: right; cursor: pointer; font-size: 30px; color: #666; background: white; z-index: 100; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; margin-top: -10px; margin-right: -10px; }
 
-        /* CARRINHO */
-        .cart-sidebar { position: fixed; top: 0; right: -400px; width: 400px; max-width: 100%; height: 100vh; background: #fff; box-shadow: -5px 0 15px rgba(0,0,0,0.1); z-index: 1000; transition: right 0.3s ease; display: flex; flex-direction: column; padding: 20px; }
+        .variant-item { border: 2px solid var(--border-color); padding: 12px; border-radius: 10px; cursor: pointer; margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; }
+        .variant-item.selected { border-color: var(--primary-color); background: #f4f9f4; }
+
+        /* ÍCONE DO CARRINHO PREMIUM */
+        .cart-icon { position: relative; cursor: pointer; background: #fff; width: 45px; height: 45px; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid var(--border-color); box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: all 0.3s; }
+        .cart-icon i { font-size: 20px; color: var(--primary-color); }
+        .cart-count { position: absolute; top: -5px; right: -5px; background-color: var(--secondary-color); color: white; border-radius: 50%; width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; border: 2px solid #fff; }
+
+        /* DESIGN ELEGANTE DO CARRINHO */
+        .cart-sidebar { position: fixed; top: 0; right: -100%; width: 400px; max-width: 90%; height: 100vh; background: #fff; box-shadow: -10px 0 30px rgba(0,0,0,0.1); z-index: 2000; transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1); display: flex; flex-direction: column; }
         .cart-sidebar.open { right: 0; }
-        .cart-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; margin-bottom: 20px; }
-        .close-cart { cursor: pointer; font-size: 24px; color: var(--text-light); }
-        .cart-items { flex-grow: 1; overflow-y: auto; }
-        .cart-item { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px dashed var(--border-color); }
-        .cart-item-info h4 { font-size: 14px; margin-bottom: 2px; }
-        .cart-item-info span { font-size: 11px; color: #888; }
-        .cart-qty-controls { display: flex; gap: 10px; margin-top: 5px; }
-        .cart-qty-btn { background: #eee; border: none; border-radius: 4px; width: 22px; height: 22px; cursor: pointer; font-weight: bold; }
-        .cart-item-price-box { text-align: right; }
-        .cart-item-price { color: var(--primary-color); font-weight: bold; font-size: 15px; }
-        .cart-item-remove { color: #d9534f; cursor: pointer; font-size: 11px; text-decoration: underline; }
-        .cart-footer { border-top: 2px solid var(--border-color); padding-top: 20px; }
-        .cart-total { display: flex; justify-content: space-between; font-size: 20px; font-weight: bold; margin-bottom: 20px; color: var(--primary-color); }
-        .btn-whatsapp { width: 100%; background: #25D366; color: white; padding: 15px; border-radius: 25px; border: none; cursor: pointer; font-weight: bold; font-size: 16px; }
-        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999; display: none; }
+        .cart-header { padding: 25px; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; background-color: var(--bg-color); }
+        .cart-header h2 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--primary-color); margin: 0; }
+        .close-cart { font-size: 20px; cursor: pointer; color: var(--text-light); transition: 0.3s; }
+        .close-cart:hover { transform: rotate(90deg); color: var(--text-dark); }
+        .cart-items { flex-grow: 1; overflow-y: auto; padding: 20px; }
+        .cart-item { display: flex; gap: 15px; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid #f9f9f9; }
+        .cart-item-info { flex-grow: 1; }
+        .cart-item-info h4 { font-size: 15px; margin-bottom: 4px; color: var(--text-dark); }
+        .cart-item-info p { font-size: 12px; color: var(--text-light); margin-bottom: 10px; }
+        .qty-wrapper { display: flex; align-items: center; gap: 12px; background: #f4f4f2; width: fit-content; padding: 4px 10px; border-radius: 20px; }
+        .qty-btn-cart { border: none; background: none; cursor: pointer; font-size: 14px; color: var(--primary-color); display: flex; align-items: center; justify-content: center; }
+        .qty-number-cart { font-size: 14px; font-weight: bold; min-width: 20px; text-align: center; }
+        .cart-item-right { display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end; }
+        .cart-item-price { font-weight: 700; color: var(--primary-color); }
+        .remove-item { color: #c9a0dc; font-size: 12px; cursor: pointer; transition: 0.3s; }
+        .remove-item:hover { color: #d9534f; }
+        .cart-footer { padding: 25px; background: var(--bg-color); border-top: 1px solid var(--border-color); }
+        .total-row { display: flex; justify-content: space-between; margin-bottom: 20px; }
+        .total-row strong { font-size: 22px; color: var(--primary-color); font-family: 'Playfair Display', serif; }
+        .btn-checkout { width: 100%; background: #25D366; color: white; padding: 16px; border: none; border-radius: 30px; font-weight: bold; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s; }
+
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1999; display: none; }
         .overlay.open { display: block; }
-        footer { background-color: var(--primary-color); color: #fff; text-align: center; padding: 40px 20px; }
         
-        @media (max-width: 768px) { header { flex-direction: column; padding: 15px; gap: 15px; } }        
+        @media (max-width: 768px) { header { flex-direction: column; padding: 15px; } }
     </style>
 </head>
 <body>
@@ -112,210 +81,162 @@
 
     <header>
         <a href="index.html" class="logo">Fio de Aroma<span>Cosmética Artesanal</span></a>
-        <a href="index.html" class="btn-voltar"><i class="fas fa-arrow-left"></i> Voltar ao Início</a>
+        <a href="index.html" style="text-decoration:none; color:var(--text-dark); font-weight:bold;"><i class="fas fa-arrow-left"></i> Início</a>
         <div class="cart-icon" onclick="toggleCart()">
-            <i class="fas fa-shopping-bag"></i>
+            <i class="fa-solid fa-bag-shopping"></i>
             <span class="cart-count" id="cart-count">0</span>
         </div>
     </header>
 
     <section class="store-section">
-        <div class="page-header" id="page-header">
-            <!-- Título da Categoria inserido via JS -->
-        </div>
-        <div class="product-grid" id="product-grid">
-            <!-- Produtos inseridos via JS -->
-        </div>
+        <div class="page-header" id="page-header"></div>
+        <div id="container-btn-todos" style="text-align: center; margin-bottom: 30px;"></div>
+        <div id="product-grid"></div>
     </section>
 
-    <!-- MODAL DE PRODUTOS -->
-    <div class="modal-overlay" id="modal-produto" onclick="fecharModalSeClicarFora(event)">
+    <!-- MODAL DE PRODUTO -->
+    <div class="modal-overlay" id="modal-produto">
         <div class="modal-content">
-            <span class="modal-close" onclick="fecharModal()"><i class="fas fa-times"></i></span>
-            <div class="modal-header">
-                <h3 class="modal-title" id="modal-titulo">Nome</h3>
-                <p class="product-desc" id="modal-desc">Desc</p>
+            <span class="btn-fechar-modal" onclick="fecharModal()">&times;</span>
+            <h3 id="modal-titulo" style="margin-bottom:10px; color:var(--primary-color);"></h3>
+            <p id="modal-desc" style="font-size:14px; color:#666; margin-bottom:20px;"></p>
+            <div id="modal-midia" style="width:100%; height:200px; background:#eee; border-radius:10px; margin-bottom:20px; overflow:hidden;"></div>
+            <div id="modal-variantes"></div>
+            <div style="display:flex; align-items:center; justify-content:center; gap:20px; margin:20px 0;">
+                <button onclick="alterarQuantidadeModal(-1)" style="width:35px; height:35px; border-radius:50%; border:1px solid var(--primary-color); background:none; cursor:pointer;">-</button>
+                <span id="modal-quantidade" style="font-weight:bold; font-size:18px;">1</span>
+                <button onclick="alterarQuantidadeModal(1)" style="width:35px; height:35px; border-radius:50%; border:1px solid var(--primary-color); background:none; cursor:pointer;">+</button>
             </div>
-            <div class="modal-media-container" id="modal-midia"></div>
-            <p style="margin-bottom: 10px; font-weight: bold; font-size: 14px;">Escolha a opção:</p>
-            <div class="variant-list" id="modal-variantes"></div>
-            <div class="quantity-selector">
-                <button class="qty-btn" onclick="alterarQuantidadeModal(-1)"><i class="fas fa-minus"></i></button>
-                <span class="qty-number" id="modal-quantidade">1</span>
-                <button class="qty-btn" onclick="alterarQuantidadeModal(1)"><i class="fas fa-plus"></i></button>
-            </div>
-            <button class="btn-confirm" id="btn-add-modal" onclick="adicionarVarianteSelecionada()">Adicionar</button>
+            <button id="btn-add-modal" class="btn-add" style="background:var(--primary-color); color:white;" onclick="adicionarVarianteSelecionada()">Adicionar</button>
         </div>
     </div>
 
-    <!-- CARRINHO LATERAL -->
+    <!-- CARRINHO ELEGANTE -->
     <div class="cart-sidebar" id="cart-sidebar">
-        <div class="cart-header"><h2>Seu Carrinho</h2><span class="close-cart" onclick="toggleCart()"><i class="fas fa-times"></i></span></div>
+        <div class="cart-header">
+            <h2>Sua Sacola</h2>
+            <span class="close-cart" onclick="toggleCart()"><i class="fas fa-times"></i></span>
+        </div>
         <div class="cart-items" id="cart-items"></div>
         <div class="cart-footer">
-            <div class="cart-total"><span>Total:</span><span id="cart-total-price">R$ 0,00</span></div>
-            <button class="btn-whatsapp" onclick="checkoutWhatsApp()"><i class="fab fa-whatsapp"></i> Enviar Pedido</button>
+            <div class="total-row">
+                <span>Subtotal</span>
+                <strong id="cart-total-price">R$ 0,00</strong>
+            </div>
+            <button class="btn-checkout" onclick="checkoutWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Finalizar Pedido
+            </button>
         </div>
     </div>
 
-    <footer>
-        <h3 style="font-family: 'Playfair Display', serif; font-size: 24px;">Fio de Aroma</h3>
-        <p>Cosméticos Artesanais - Feito à mão com amor ♥</p>
-    </footer>
-
-    <!-- CARREGAR O SCRIPT COMPARTILHADO -->
     <script src="script.js"></script>
-    
-    <!-- LÓGICA ESPECÍFICA DESTA PÁGINA -->
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const categoriaID = urlParams.get('cat');
-        const categoriaInfo = categoriasLayout.find(c => c.id === categoriaID);
-        
-        if (!categoriaInfo) {
-            window.location.href = "index.html";
-            return;
-        }
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoriaID = urlParams.get('cat') || 'todos';
+    const subcategoriaID = urlParams.get('sub');
+    const pageHeader = document.getElementById('page-header');
+    const productGridContainer = document.getElementById('product-grid');
+    const btnTodosContainer = document.getElementById('container-btn-todos');
 
-        const pageHeader = document.getElementById('page-header');
-        pageHeader.innerHTML = `<h1><i class="fas ${categoriaInfo.icone}"></i> ${categoriaInfo.titulo}</h1>`;
-        if (categoriaInfo.imagemBanner) {
-            pageHeader.innerHTML += `<img src="${categoriaInfo.imagemBanner}" class="category-banner">`;
-        }
+    function gerarCardProduto(prod) {
+        let menorPreco = Math.min(...prod.variantes.map(v => v.preco));
+        let precoFormatado = menorPreco.toFixed(2).replace('.', ',');
+        let textoAPartir = prod.variantes.length > 1 ? `<span style="font-size: 11px; font-weight: normal; color: #888; display: block; margin-bottom: -5px;">A partir de</span>` : "";
+        let midia = (prod.imagemPrincipal) ? `<img src="${prod.imagemPrincipal}" class="product-image" alt="${prod.nome}">` : `<div class="product-icon"><i class="fas ${prod.icon}"></i></div>`;
 
-        const productGridContainer = document.getElementById('product-grid');
-        productGridContainer.innerHTML = ''; // Limpa antes de injetar
-        productGridContainer.style.display = "block"; // Mudando de grid para block para comportar os títulos
-        
-        const produtosDaCategoria = produtos.filter(p => p.cat === categoriaID);
+        let btnTexto = prod.variantes.length > 1 ? "Ver Opções" : "Adicionar à Sacola";
+        let btnOnClick = prod.variantes.length > 1 ? `abrirModalProduto(${prod.id})` : `adicionarDireto(${prod.id})`;
 
-        if (produtosDaCategoria.length === 0) {
-            productGridContainer.innerHTML = "<p>Nenhum produto cadastrado nesta categoria no momento.</p>";
-            return;
-        }
+        return `<div class="product-card">${midia}<h4 class="product-name">${prod.nome}</h4><div class="product-price">${textoAPartir} R$ ${precoFormatado}</div><button class="btn-add" onclick="${btnOnClick}">${btnTexto}</button></div>`;
+    }
 
-        let htmlFinal = "";
-
-        // FUNÇÃO AUXILIAR PARA GERAR O HTML DO CARD DO PRODUTO
-        function gerarCardProduto(prod) {
-            let menorPreco = Math.min(...prod.variantes.map(v => v.preco));
-            let precoExibicao = `R$ ${menorPreco.toFixed(2).replace('.', ',')}`;
-            let midiaVisual = (prod.imagemPrincipal && prod.imagemPrincipal !== "")
-                ? `<img src="${prod.imagemPrincipal}" alt="${prod.nome}" class="product-image">`
-                : `<div class="product-icon"><i class="fas ${prod.icon}"></i></div>`;
-
-            return `
-                <div class="product-card">
-                    ${midiaVisual}
-                    <h4 class="product-name">${prod.nome}</h4>
-                    <p class="product-desc">${prod.desc}</p>
-                    <div class="product-price">${precoExibicao}</div>
-                    <button class="btn-add" onclick="abrirModalProduto(${prod.id})">Adicionar</button>
-                </div>
-            `;
-        }
-
-        // VERIFICA SE A CATEGORIA TEM SUBCATEGORIAS CADASTRADAS
-        if (categoriaInfo.subcategorias && categoriaInfo.subcategorias.length > 0) {
-            
-            // Loop em cada subcategoria para criar os blocos
-            categoriaInfo.subcategorias.forEach(sub => {
-                const prodsDaSub = produtosDaCategoria.filter(p => p.subcat === sub.id);
-                
-                if (prodsDaSub.length > 0) {
-                    htmlFinal += `<h2 id="${sub.id}" class="subcat-title" style="scroll-margin-top: 100px;">${sub.titulo}</h2>`;
-                    htmlFinal += `<div class="product-grid" style="margin-bottom: 40px;">`;
-                    prodsDaSub.forEach(prod => { htmlFinal += gerarCardProduto(prod); });
-                    htmlFinal += `</div>`;
-                }
+    let htmlFinal = "";
+    if (subcategoriaID) {
+        const catInfo = categoriasLayout.find(c => c.id === categoriaID);
+        const subInfo = catInfo.subcategorias.find(s => s.id === subcategoriaID);
+        pageHeader.innerHTML = `<span style="color:#888; text-transform:uppercase; font-size:12px;">${catInfo.titulo}</span><h1>${subInfo.titulo}</h1>`;
+        if (subInfo.banner) pageHeader.innerHTML += `<img src="${subInfo.banner}" class="category-banner">`;
+        btnTodosContainer.innerHTML = `<a href="produtos.html?cat=${categoriaID}" class="btn-add" style="width:auto; padding:8px 20px; margin:5px; background:#fff;">Ver linha ${catInfo.titulo}</a><a href="produtos.html?cat=todos" class="btn-add" style="width:auto; padding:8px 20px; margin:5px; border-color:var(--secondary-color); color:var(--secondary-color);">Ver Loja Toda</a>`;
+        const filtrados = produtos.filter(p => p.cat === categoriaID && p.subcat === subcategoriaID);
+        htmlFinal += `<div class="product-grid">${filtrados.map(p => gerarCardProduto(p)).join('')}</div>`;
+    } else if (categoriaID !== 'todos') {
+        const catInfo = categoriasLayout.find(c => c.id === categoriaID);
+        pageHeader.innerHTML = `<h1>${catInfo.titulo}</h1>`;
+        if(catInfo.imagemBanner) pageHeader.innerHTML += `<img src="${catInfo.imagemBanner}" class="category-banner">`;
+        btnTodosContainer.innerHTML = `<a href="produtos.html?cat=todos" class="btn-add" style="width:auto; padding:8px 20px;">Ver Loja Completa</a>`;
+        const prodsDaCat = produtos.filter(p => p.cat === categoriaID);
+        if (catInfo.subcategorias) {
+            catInfo.subcategorias.forEach(sub => {
+                const prodsSub = prodsDaCat.filter(p => p.subcat === sub.id);
+                if(prodsSub.length > 0) htmlFinal += `<h2 class="subcat-title">${sub.titulo}</h2><div class="product-grid">${prodsSub.map(p => gerarCardProduto(p)).join('')}</div>`;
             });
-
-            // Se houver produtos nesta categoria que VOCÊ ESQUECEU de colocar "subcat"
-            const prodsSemSub = produtosDaCategoria.filter(p => !p.subcat);
-            if (prodsSemSub.length > 0) {
-                htmlFinal += `<h2 class="subcat-title">Outros Produtos</h2>`;
-                htmlFinal += `<div class="product-grid" style="margin-bottom: 40px;">`;
-                prodsSemSub.forEach(prod => { htmlFinal += gerarCardProduto(prod); });
-                htmlFinal += `</div>`;
-            }
-
         } else {
-            // SE NÃO TIVER SUBCATEGORIA (Ex: Casa, Infantil), renderiza tudo junto normalmente
-            htmlFinal += `<div class="product-grid">`;
-            produtosDaCategoria.forEach(prod => { htmlFinal += gerarCardProduto(prod); });
-            htmlFinal += `</div>`;
+            htmlFinal += `<div class="product-grid">${prodsDaCat.map(p => gerarCardProduto(p)).join('')}</div>`;
         }
-
-        productGridContainer.innerHTML = htmlFinal;
-        // VERIFICA SE HÁ UMA ÂNCORA (ex: #perfumados) NA URL E ROLA ATÉ ELA
-if (window.location.hash) {
-    const targetElement = document.querySelector(window.location.hash);
-    if (targetElement) {
-        setTimeout(() => {
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        }, 150); // Um leve atraso garante que os produtos já foram desenhados na tela
-    }
-}
-    });
-
-    // Funções do Modal de Produto e Carrinho (Mantidas iguais ao que te passei na resposta anterior)
-    function abrirModalProduto(idProd) {
-        const prod = produtos.find(p => p.id === idProd);
-        produtoSendoVisto = prod;
-        varianteSelecionada = prod.variantes[0].idVar; 
-        qtdeSelecionada = 1;
-        document.getElementById('modal-titulo').innerHTML = prod.nome;
-        document.getElementById('modal-desc').innerHTML = prod.desc;
-        desenharOpcoesDoModal(); atualizarMidiaDoModal(); atualizarTotalModal();
-        document.getElementById('modal-produto').classList.add('open');
-    }
-
-    function fecharModal() { document.getElementById('modal-produto').classList.remove('open'); }
-    function fecharModalSeClicarFora(event) { if (event.target.id === 'modal-produto') fecharModal(); }
-
-    function desenharOpcoesDoModal() {
-        const divVariantes = document.getElementById('modal-variantes');
-        let htmlOpcoes = "";
-        produtoSendoVisto.variantes.forEach(v => {
-            let isSelected = (v.idVar === varianteSelecionada) ? 'selected' : '';
-            htmlOpcoes += `<div class="variant-item ${isSelected}" onclick="selecionarVariante('${v.idVar}')">
-                <span class="variant-name">${v.nome}</span><span class="variant-price">R$ ${v.preco.toFixed(2).replace('.', ',')}</span>
-            </div>`;
+    } else {
+        pageHeader.innerHTML = `<h1>Toda a nossa Loja</h1>`;
+        categoriasLayout.forEach(cat => {
+            const filtrados = produtos.filter(p => p.cat === cat.id);
+            if(filtrados.length > 0) htmlFinal += `<h2 class="subcat-title">${cat.titulo}</h2><div class="product-grid">${filtrados.map(p => gerarCardProduto(p)).join('')}</div>`;
         });
-        divVariantes.innerHTML = htmlOpcoes;
     }
+    productGridContainer.innerHTML = htmlFinal;
+});
 
-    function atualizarMidiaDoModal() {
-        const divMidia = document.getElementById('modal-midia');
-        const varAtual = produtoSendoVisto.variantes.find(v => v.idVar === varianteSelecionada);
-        if (varAtual.imagem && varAtual.imagem !== "") { divMidia.innerHTML = `<img src="${varAtual.imagem}">`; } 
-        else if (produtoSendoVisto.imagemPrincipal && produtoSendoVisto.imagemPrincipal !== "") { divMidia.innerHTML = `<img src="${produtoSendoVisto.imagemPrincipal}">`; } 
-        else { divMidia.innerHTML = `<i class="fas ${produtoSendoVisto.icon}"></i>`; }
-    }
+function adicionarDireto(id) {
+    const prod = produtos.find(p => p.id === id);
+    const v = prod.variantes[0];
+    const idUnico = `${prod.id}-${v.idVar}`;
+    const existente = carrinho.find(i => i.carrinhoId === idUnico);
+    if(existente) existente.quantidade += 1;
+    else carrinho.push({ carrinhoId: idUnico, nomeProduto: prod.nome, nomeVariante: v.nome, preco: v.preco, quantidade: 1 });
+    salvarCarrinho(); atualizarInterfaceCarrinho();
+    if (window.innerWidth > 768) toggleCart();
+}
 
-    function selecionarVariante(idVar) { varianteSelecionada = idVar; desenharOpcoesDoModal(); atualizarMidiaDoModal(); atualizarTotalModal(); }
-    function alterarQuantidadeModal(delta) { qtdeSelecionada += delta; if (qtdeSelecionada < 1) qtdeSelecionada = 1; atualizarTotalModal(); }
+function abrirModalProduto(id) {
+    const prod = produtos.find(p => p.id === id);
+    if(!prod) return;
+    produtoSendoVisto = prod;
+    varianteSelecionada = prod.variantes[0].idVar; 
+    qtdeSelecionada = 1;
+    renderizarConteudoModal();
+    document.getElementById('modal-produto').classList.add('open');
+}
 
-    function atualizarTotalModal() {
-        document.getElementById('modal-quantidade').innerText = qtdeSelecionada;
-        const varAtual = produtoSendoVisto.variantes.find(v => v.idVar === varianteSelecionada);
-        document.getElementById('btn-add-modal').innerText = `Adicionar - R$ ${(varAtual.preco * qtdeSelecionada).toFixed(2).replace('.', ',')}`;
-    }
+function renderizarConteudoModal() {
+    const prod = produtoSendoVisto;
+    const varAtual = prod.variantes.find(v => v.idVar === varianteSelecionada);
+    document.getElementById('modal-titulo').innerText = prod.nome;
+    document.getElementById('modal-desc').innerHTML = prod.desc;
+    const divVar = document.getElementById('modal-variantes');
+    divVar.innerHTML = prod.variantes.map(v => `<div class="variant-item ${v.idVar === varianteSelecionada ? 'selected' : ''}" onclick="selecionarVariante('${v.idVar}')"><span>${v.nome}</span> <b>R$ ${v.preco.toFixed(2).replace('.',',')}</b></div>`).join('');
+    const divMidia = document.getElementById('modal-midia');
+    let imagemParaExibir = (varAtual.imagem && varAtual.imagem.trim() !== "") ? varAtual.imagem : prod.imagemPrincipal;
+    divMidia.innerHTML = imagemParaExibir ? `<img src="${imagemParaExibir}" style="width:100%; height:100%; object-fit:cover;">` : `<div style="font-size:50px; display:flex; justify-content:center; align-items:center; height:100%; color:#ccc;"><i class="fas ${prod.icon}"></i></div>`;
+    atualizarTotalModal();
+}
 
-    function adicionarVarianteSelecionada() {
-        const varObj = produtoSendoVisto.variantes.find(v => v.idVar === varianteSelecionada);
-        const carrinhoId = `${produtoSendoVisto.id}-${varObj.idVar}`;
-        const itemExistente = carrinho.find(item => item.carrinhoId === carrinhoId);
+function selecionarVariante(id) { varianteSelecionada = id; renderizarConteudoModal(); }
+function fecharModal() { document.getElementById('modal-produto').classList.remove('open'); }
+function alterarQuantidadeModal(n) { qtdeSelecionada = Math.max(1, qtdeSelecionada + n); atualizarTotalModal(); }
 
-        if (itemExistente) { itemExistente.quantidade += qtdeSelecionada; } 
-        else { carrinho.push({ carrinhoId: carrinhoId, nomeProduto: produtoSendoVisto.nome, nomeVariante: varObj.nome, preco: varObj.preco, quantidade: qtdeSelecionada }); }
+function atualizarTotalModal() {
+    document.getElementById('modal-quantidade').innerText = qtdeSelecionada;
+    const v = produtoSendoVisto.variantes.find(v => v.idVar === varianteSelecionada);
+    document.getElementById('btn-add-modal').innerText = `Adicionar - R$ ${(v.preco * qtdeSelecionada).toFixed(2).replace('.',',')}`;
+}
 
-        salvarCarrinho(); 
-        atualizarInterfaceCarrinho();
-        fecharModal();
-        if (window.innerWidth > 768) { toggleCart(); }
-    }
-</script>
+function adicionarVarianteSelecionada() {
+    const v = produtoSendoVisto.variantes.find(v => v.idVar === varianteSelecionada);
+    const idUnico = `${produtoSendoVisto.id}-${v.idVar}`;
+    const existente = carrinho.find(i => i.carrinhoId === idUnico);
+    if(existente) existente.quantidade += qtdeSelecionada;
+    else carrinho.push({ carrinhoId: idUnico, nomeProduto: produtoSendoVisto.nome, nomeVariante: v.nome, preco: v.preco, quantidade: qtdeSelecionada });
+    salvarCarrinho(); atualizarInterfaceCarrinho(); fecharModal();
+    if (window.innerWidth > 768) toggleCart();
+}
+    </script>
 </body>
 </html>
