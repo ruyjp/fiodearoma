@@ -117,21 +117,9 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/rosa-mosqueta.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
-      {
-        idVar: "v2",
-        nome: "Massageador (130g)",
-        preco: 12.99,
-      },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -143,17 +131,9 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/alecrim.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
       { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -165,17 +145,9 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/alecrim-blanc.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
       { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -187,21 +159,9 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/flor-laranjeira.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
-      {
-        idVar: "v2",
-        nome: "Massageador (130g)",
-        preco: 12.99,
-      },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -213,21 +173,9 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/algodao.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
-      {
-        idVar: "v2",
-        nome: "Massageador (130g)",
-        preco: 12.99,
-      },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -239,21 +187,9 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/bergamota.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
-      {
-        idVar: "v2",
-        nome: "Massageador (130g)",
-        preco: 12.99,
-      },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -265,21 +201,9 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/macadamia.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
-      {
-        idVar: "v2",
-        nome: "Massageador (130g)",
-        preco: 12.99,
-      },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -291,21 +215,9 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/maracuja.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
-      {
-        idVar: "v2",
-        nome: "Massageador (130g)",
-        preco: 12.99,
-      },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -317,21 +229,9 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/pitaya.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
-      {
-        idVar: "v2",
-        nome: "Massageador (130g)",
-        preco: 12.99,
-      },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -343,21 +243,9 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/zarath.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
-      {
-        idVar: "v2",
-        nome: "Massageador (130g)",
-        preco: 12.99,
-      },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -369,21 +257,9 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/limao-siciliano.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
-      {
-        idVar: "v2",
-        nome: "Massageador (130g)",
-        preco: 12.99,
-      },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -409,17 +285,9 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/lavanda-francesa.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
       { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -431,17 +299,9 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/erva-doce.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
       { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -453,17 +313,9 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/morango.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
       { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -475,17 +327,9 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/melancia.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
       { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -497,17 +341,9 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/menta.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
       { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
   {
@@ -519,17 +355,9 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/camomila.jpg",
     variantes: [
-      {
-        idVar: "v1",
-        nome: "Redondo (90g)",
-        preco: 10.49,
-      },
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
       { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
-      },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
 
@@ -905,10 +733,10 @@ const produtos = [
         imagem: "images/mami-baby-roxo.jpg",
       },
       {
-        idVar: 'v5',
-        nome: 'Amarelo',
+        idVar: "v5",
+        nome: "Amarelo",
         preco: 10.99,
-        imagem: 'images/mami-baby-amarelo.jpg'
+        imagem: "images/mami-baby-amarelo.jpg",
       },
     ],
   },
@@ -1137,7 +965,6 @@ const produtos = [
     ],
   },
 
-  // 1200
   {
     id: 1102,
     cat: "casa",
@@ -1184,8 +1011,6 @@ const produtos = [
       },
     ],
   },
-
-  //
 ];
 
 let carrinho = JSON.parse(localStorage.getItem("carrinhoFioDeAroma")) || [];
@@ -1271,26 +1096,43 @@ function checkoutWhatsApp() {
 }
 
 function toggleMenu(e) {
-  // Previne que o link '#' ou 'javascript:void(0)' suba a página
   e.preventDefault();
+  e.stopPropagation();
 
-  if (window.innerWidth <= 768) {
-    // Encontra o menu (dropdown-content) que é irmão do link clicado
-    const dropdownContent = e.currentTarget.nextElementSibling;
+  const dropdownContent = e.currentTarget.nextElementSibling;
+  const isOpen = dropdownContent.classList.contains("ativo");
 
-    // Verifica se este já está aberto
-    const isOpen = dropdownContent.classList.contains("mostrar-mobile");
+  document.querySelectorAll(".dropdown-content").forEach((el) => {
+    el.classList.remove("ativo");
+  });
 
-    // Opcional: Fecha todos os outros menus abertos antes de abrir o atual
-    document.querySelectorAll(".dropdown-content").forEach((el) => {
-      el.classList.remove("mostrar-mobile");
-    });
+  if (!isOpen) {
+    dropdownContent.classList.add("ativo");
 
-    // Se não estava aberto, abre agora
-    if (!isOpen) {
-      dropdownContent.classList.add("mostrar-mobile");
+    if (window.innerWidth <= 768) {
+      setTimeout(() => {
+        dropdownContent.scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+        });
+      }, 200);
     }
   }
 }
 
+window.addEventListener("click", function (e) {
+  if (!e.target.closest(".dropdown")) {
+    document.querySelectorAll(".dropdown-content").forEach((el) => {
+      el.classList.remove("ativo");
+    });
+  }
+});
+
+document.querySelectorAll("nav > a:not([onclick])").forEach((link) => {
+  link.addEventListener("click", () => {
+    document.querySelectorAll(".dropdown-content").forEach((el) => {
+      el.classList.remove("ativo");
+    });
+  });
+});
 document.addEventListener("DOMContentLoaded", atualizarInterfaceCarrinho);
