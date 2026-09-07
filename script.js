@@ -17,7 +17,7 @@ const categoriasLayout = [
       },
       {
         id: "geleia",
-        titulo: "Geleias de Banho",
+        titulo: "Geleias de Banho Esfoliante",
         banner: "",
       },
       {
@@ -421,17 +421,12 @@ const produtos = [
       {
         idVar: "v1",
         nome: "Redondo (90g)",
-        preco: 10.99,
+        preco: 11.49,
       },
       {
         idVar: "v2",
         nome: "Massageador (130g)",
-        preco: 12.99,
-      },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
+        preco: 14.99,
       },
     ],
   },
@@ -577,17 +572,12 @@ const produtos = [
       {
         idVar: "v1",
         nome: "Redondo (90g)",
-        preco: 10.99,
+        preco: 11.49,
       },
       {
         idVar: "v2",
         nome: "Massageador (130g)",
-        preco: 12.99,
-      },
-      {
-        idVar: "v3",
-        nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
+        preco: 14.99,
       },
     ],
   },
@@ -683,17 +673,17 @@ const produtos = [
       {
         idVar: "v1",
         nome: "Redondo (90g)",
-        preco: 10.49,
+        preco: 11.49,
       },
       {
         idVar: "v2",
         nome: "Massageador (130g)",
-        preco: 12.99,
+        preco: 13.49,
       },
       {
         idVar: "v3",
         nome: "Massageador com Bucha (130g)",
-        preco: 13.99,
+        preco: 14.49,
       },
     ],
   },
@@ -706,9 +696,21 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/melancia-menta.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 11.49,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 13.49,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 14.49,
+      },
     ],
   },
   {
@@ -720,9 +722,21 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/aveia-mel.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 11.49,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 13.49,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 14.49,
+      },
     ],
   },
   {
@@ -734,9 +748,21 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/sabonete-cereja-bergamota.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 11.49,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 13.49,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 14.49,
+      },
     ],
   },
   {
@@ -748,9 +774,21 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/sabonete-morango-cremoso.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 11.49,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 13.49,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 14.49,
+      },
     ],
   },
   {
@@ -762,9 +800,21 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/sabonete-menta-alecrim.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 11.49,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 13.49,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 14.49,
+      },
     ],
   },
   {
@@ -776,9 +826,21 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/sabonete-veludo-cereja.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 11.49,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 13.49,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 14.49,
+      },
     ],
   },
 
@@ -787,20 +849,15 @@ const produtos = [
     id: 29,
     cat: "corpoBanho",
     subcat: "especificos",
-    nome: "Enxofre",
+    nome: "Enxofre (100g)",
     desc: "Para oleosidade e acne.",
     icon: "fa-bottle-droplet",
     imagemPrincipal: "images/enxofre.jpg",
     variantes: [
       {
         idVar: "v1",
-        nome: "Normal (100g)",
+        nome: "",
         preco: 11.99,
-      },
-      {
-        idVar: "v2",
-        nome: "Massageador (130g)",
-        preco: 15.99,
       },
     ],
   },
@@ -824,17 +881,16 @@ const produtos = [
     id: 31,
     cat: "corpoBanho",
     subcat: "especificos",
-    nome: "Açafrão",
+    nome: "Açafrão (100g)",
     desc: "Ação antioxidante.",
     icon: "fa-bottle-droplet",
     imagemPrincipal: "images/acafrao.jpg",
     variantes: [
       {
         idVar: "v1",
-        nome: "Retangular (100g)",
+        nome: "",
         preco: 11.99,
       },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 15.99 },
     ],
   },
   {
@@ -912,17 +968,39 @@ const produtos = [
         preco: 9.99,
         imagem: "images/argila-rosa.jpg",
       },
+    ],
+  },
+  {
+    id: 82,
+    cat: "corpoBanho",
+    subcat: "especificos",
+    nome: "Carvão Ativado (70g)",
+    desc: "",
+    icon: "fa-bottle-droplet",
+    imagemPrincipal: "images/argila-carvao-ativado",
+    variantes: [
       {
-        idVar: "v12",
-        nome: "Dolomita (70g)",
-        preco: 9.99,
-        imagem: "images/argila-dolomita.jpg",
-      },
-      {
-        idVar: "v13",
-        nome: "Carvão Ativado (70g)",
-        preco: 9.99,
+        idVar: "v1",
+        nome: "",
+        preco: 10.69,
         imagem: "images/argila-carvao-ativado.jpg",
+      },
+    ],
+  },
+  {
+    id: 83,
+    cat: "corpoBanho",
+    subcat: "especificos",
+    nome: "Dolomita (70g)",
+    desc: "",
+    icon: "fa-bottle-droplet",
+    imagemPrincipal: "images/argila-carvao-ativado",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 10.99,
+        imagem: "images/argila-dolomita.jpg",
       },
     ],
   },
@@ -930,8 +1008,8 @@ const produtos = [
     id: 33,
     cat: "corpoBanho",
     subcat: "especificos",
-    nome: "Carvão & Branca",
-    desc: "Purificante.",
+    nome: "Carvão Ativado & Argila Branca",
+    desc: "Purificante",
     icon: "fa-bottle-droplet",
     imagemPrincipal: "images/branca-carvao.jpg",
     variantes: [
@@ -943,7 +1021,7 @@ const produtos = [
     ],
   },
 
-  // Energéticos
+  // Sabonetes Energéticos
   {
     id: 34,
     cat: "corpoBanho",
@@ -968,7 +1046,7 @@ const produtos = [
       {
         idVar: "v3",
         nome: "Alecrim + Sal Grosso (100g)",
-        preco: 12.49,
+        preco: 11.29,
         imagem: "images/alecrim-salgrosso.jpg",
       },
       {
@@ -1045,9 +1123,33 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
-        preco: 37.99,
-        imagem: "images/body-refil.jpg",
+        nome: "Acalanto",
+        preco: 35.99,
+        imagem: "images/body-acalanto.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Majestade",
+        preco: 35.99,
+        imagem: "images/body-majestade.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "Veludo de Cereja",
+        preco: 35.99,
+        imagem: "images/body-veludo.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "Magnética",
+        preco: 35.99,
+        imagem: "images/body-magnetica.jpg",
+      },
+      {
+        idVar: "v5",
+        nome: "Instinto",
+        preco: 35.99,
+        imagem: "images/body-instinto.jpg",
       },
     ],
   },
@@ -1093,6 +1195,7 @@ const produtos = [
       },
     ],
   },
+
   // Geleias de Banho
   {
     id: 38,
@@ -1106,31 +1209,31 @@ const produtos = [
       {
         idVar: "v1",
         nome: "Limão Siciliano",
-        preco: 29.99,
+        preco: 24.99,
         imagem: "images/geleia-limao.jpg",
       },
       {
         idVar: "v2",
         nome: "Pitaya",
-        preco: 29.99,
+        preco: 24.99,
         imagem: "images/geleia-pitaya.jpg",
       },
       {
         idVar: "v3",
         nome: "Maracujá",
-        preco: 29.99,
+        preco: 24.99,
         imagem: "images/geleia-maracuja.jpg",
       },
       {
         idVar: "v4",
         nome: "Melancia",
-        preco: 29.99,
+        preco: 24.99,
         imagem: "images/geleia-melancia.jpg",
       },
       {
         idVar: "v5",
         nome: "Morango",
-        preco: 29.99,
+        preco: 24.99,
         imagem: "images/geleia-morango.jpg",
       },
     ],
@@ -1146,9 +1249,33 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
+        nome: "Limão Siciliano",
         preco: 19.99,
-        imagem: "",
+        imagem: "images/geleia-limao.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Pitaya",
+        preco: 19.99,
+        imagem: "images/geleia-pitaya.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "Maracujá",
+        preco: 19.99,
+        imagem: "images/geleia-maracuja.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "Melancia",
+        preco: 19.99,
+        imagem: "images/geleia-melancia.jpg",
+      },
+      {
+        idVar: "v5",
+        nome: "Morango",
+        preco: 19.99,
+        imagem: "images/geleia-morango.jpg",
       },
     ],
   },
@@ -1212,9 +1339,39 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
-        preco: 19.99,
-        imagem: "images/sabonete-liquido-refil.jpg",
+        nome: "Erva Doce",
+        preco: 11.39,
+        imagem: "images/sabonete-liquido-erva.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Flor de Cerejeira",
+        preco: 11.39,
+        imagem: "images/sabonete-liquido-cerejeira.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "Lavanda Francesa",
+        preco: 11.39,
+        imagem: "images/sabonete-liquido-lavanda.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "Rosa Mosqueta",
+        preco: 11.39,
+        imagem: "images/sabonete-liquido-rosa.jpg",
+      },
+      {
+        idVar: "v5",
+        nome: "Algodão",
+        preco: 11.39,
+        imagem: "images/sabonete-liquido-algodao.jpg",
+      },
+      {
+        idVar: "v6",
+        nome: "Maracujá",
+        preco: 11.39,
+        imagem: "images/sabonete-liquido-maracuja.jpg",
       },
     ],
   },
@@ -1260,7 +1417,19 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
+        nome: "Menta",
+        preco: 19.99,
+        imagem: "images/sabonete-esfoliante-menta.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Maraacujá",
+        preco: 19.99,
+        imagem: "images/sabonete-esfoliante-maracuja.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "Morango",
         preco: 19.99,
         imagem: "images/sabonete-esfoliante-morango.jpg",
       },
@@ -1279,7 +1448,7 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "Espuma de Barbear",
+        nome: "",
         preco: 32.99,
         imagem: "images/espuma-barbear.jpg",
       },
@@ -1296,7 +1465,7 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "Loção Pós-Barba",
+        nome: "",
         preco: 22.99,
         imagem: "images/pos-barba.jpg",
       },
@@ -1322,12 +1491,12 @@ const produtos = [
       {
         idVar: "v2",
         nome: "Menta c/ Sal (Pós treino)",
-        preco: 10.99,
+        preco: 11.39,
         imagem: "images/sabonete-masculino-menta.jpg",
       },
       {
         idVar: "v3",
-        nome: "Alecrim Real (Banho diário)",
+        nome: "Alecrim Real - Blanc (Banho diário)",
         preco: 10.99,
         imagem: "images/sabonete-masculino-alecrim.jpg",
       },
@@ -1347,25 +1516,25 @@ const produtos = [
       {
         idVar: "v1",
         nome: "Chá Branco",
-        preco: 29.99,
+        preco: 22.99,
         imagem: "images/agua-tecido-cha.jpg",
       },
       {
         idVar: "v2",
         nome: "Flor de Algodão",
-        preco: 29.99,
+        preco: 22.99,
         imagem: "images/agua-tecido-algodao.jpg",
       },
       {
         idVar: "v3",
         nome: "Lavanda Francesa",
-        preco: 29.99,
+        preco: 22.99,
         imagem: "images/agua-tecido-lavanda-francesa.jpg",
       },
       {
         idVar: "v4",
         nome: "Flor de Sândalo",
-        preco: 29.99,
+        preco: 22.99,
         imagem: "images/agua-tecido-sandalo.jpg",
       },
     ],
@@ -1382,9 +1551,27 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
-        preco: 13.99,
-        imagem: "images/agua-tecido-refil.jpg",
+        nome: "Chá Branco",
+        preco: 15.99,
+        imagem: "images/agua-tecido-cha.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Flor de Algodão",
+        preco: 15.99,
+        imagem: "images/agua-tecido-algodao.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "Lavanda Francesa",
+        preco: 15.99,
+        imagem: "images/agua-tecido-lavanda-francesa.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "Flor de Sândalo",
+        preco: 15.99,
+        imagem: "images/agua-tecido-sandalo.jpg",
       },
     ],
   },
@@ -1430,9 +1617,21 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
+        nome: "Lavanda Francesa",
         preco: 13.99,
-        imagem: "images/homespray-refil.jpg",
+        imagem: "images/homespray-lavandafrancesa.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Chá Branco",
+        preco: 13.99,
+        imagem: "images/homespray-chabranco.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "Limão Doce",
+        preco: 13.99,
+        imagem: "images/homespray-limaodoce.jpg",
       },
     ],
   },
@@ -1484,9 +1683,27 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
+        nome: "Lavanda Francesa",
         preco: 17.99,
-        imagem: "images/difusor-refil.jpg",
+        imagem: "images/difusor-lavandafrancesa.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Limão Doce",
+        preco: 17.99,
+        imagem: "images/difusor-limaodoce.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "Chá Branco",
+        preco: 17.99,
+        imagem: "images/difusor-chabranco.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "Bamboo",
+        preco: 17.99,
+        imagem: "images/difusor-bamboo.jpg",
       },
     ],
   },
@@ -1585,7 +1802,13 @@ const produtos = [
       {
         idVar: "v1",
         nome: "Vela Peônia (80g)",
-        preco: 1000,
+        preco: 17.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Vela Peônia na Caixa",
+        preco: 20.99,
+        imagem: "images/lembrancinha-peonia.jpg",
       },
     ],
   },
@@ -1600,9 +1823,57 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
+        nome: "Sândalo",
         preco: 19.99,
-        imagem: "images/velaG-refil.jpg",
+        imagem: "images/velaG-sandalo.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Verbena",
+        preco: 19.99,
+        imagem: "images/velaG-verbena.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "Bamboo",
+        preco: 19.99,
+        imagem: "images/velaG-bamboo.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "Canela",
+        preco: 19.99,
+        imagem: "images/velaG-canela.jpg",
+      },
+      {
+        idVar: "v5",
+        nome: "Limão Siciliano",
+        preco: 19.99,
+        imagem: "images/velaG-limaosiciliano.jpg",
+      },
+      {
+        idVar: "v6",
+        nome: "Flor de Algodão",
+        preco: 19.99,
+        imagem: "images/velaG-floralgodao.jpg",
+      },
+      {
+        idVar: "v7",
+        nome: "Fita de Vanilla",
+        preco: 19.99,
+        imagem: "images/velaG-fitavanilla.jpg",
+      },
+      {
+        idVar: "v8",
+        nome: "Lavanda Francesa",
+        preco: 19.99,
+        imagem: "images/velaG-lavandafrancesa.jpg",
+      },
+      {
+        idVar: "v9",
+        nome: "Morango com Champanhe",
+        preco: 19.99,
+        imagem: "images/velaG-morangochampanhe.jpg",
       },
     ],
   },
@@ -1642,9 +1913,15 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
+        nome: "Carro Novo",
         preco: 9.99,
-        imagem: "images/carro-refil.jpg",
+        imagem: "images/carro-novo.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Limão Siciliano",
+        preco: 9.99,
+        imagem: "images/carro-limaosiciliano.jpg",
       },
     ],
   },
@@ -1654,7 +1931,7 @@ const produtos = [
     id: 59,
     cat: "perfumaria",
     subcat: "cabelo",
-    nome: "Perfume de Cabelo",
+    nome: "(EM BREVE) Perfume de Cabelo",
     desc: "",
     icon: "fa-house-chimney",
     imagemPrincipal: "images/cabelo-.jpg",
@@ -1662,7 +1939,7 @@ const produtos = [
       {
         idVar: "v1",
         nome: "",
-        preco: 24.99,
+        preco: 0.0,
         imagem: "images/cabelo-.jpg",
       },
     ],
@@ -1671,7 +1948,7 @@ const produtos = [
     id: 60,
     cat: "perfumaria",
     subcat: "cabelo",
-    nome: "Perfume de cabelo (REFIL)",
+    nome: "(EM BREVE) Perfume de cabelo (REFIL)",
     desc: "",
     icon: "fa-house-chimney",
     imagemPrincipal: "images/cabelo-.jpg",
@@ -1679,7 +1956,7 @@ const produtos = [
       {
         idVar: "v1",
         nome: "",
-        preco: 19.99,
+        preco: 0,
         imagem: "images/cabelo-.jpg",
       },
     ],
@@ -1828,25 +2105,20 @@ const produtos = [
     id: 69,
     cat: "presentes",
     subcat: "lembrancinha",
-    nome: "Coração",
+    nome: "15 Anos",
     desc: "",
     icon: "fa-house-chimney",
-    imagemPrincipal: "images/deusfiel.jpg",
+    imagemPrincipal: "images/15anos.jpg",
     variantes: [
       {
         idVar: "v1",
         nome: "15 Anos",
-        preco: 1.5,
+        preco: 2.5,
         imagem: "images/15anos.jpg",
-      },
-      {
-        idVar: "v2",
-        nome: "Deus é fiel",
-        preco: 1.5,
-        imagem: "images/deusfiel.jpg",
       },
     ],
   },
+
   {
     id: 70,
     cat: "presentes",
@@ -1859,7 +2131,7 @@ const produtos = [
       {
         idVar: "v1",
         nome: "",
-        preco: 1.65,
+        preco: 2.5,
         imagem: "images/pezinhos.jpg",
       },
     ],
@@ -1867,17 +2139,17 @@ const produtos = [
   {
     id: 71,
     cat: "presentes",
-    subcat: "lembrancinha",
-    nome: "Lembrancinhas Personalizadas",
+    subcat: "",
+    nome: "",
     desc: "",
     icon: "fa-house-chimney",
-    imagemPrincipal: "images/lembrancinha-personalizada.jpg",
+    imagemPrincipal: "images/.jpg",
     variantes: [
       {
         idVar: "v1",
         nome: "",
-        preco: 3.0,
-        imagem: "images/lembrancinha-personalizada.jpg",
+        preco: 0.0,
+        imagem: "images/.jpg",
       },
     ],
   },
@@ -1888,18 +2160,18 @@ const produtos = [
     nome: "Vela Especial Peônia",
     desc: "",
     icon: "fa-house-chimney",
-    imagemPrincipal: "images/lembrancinha-peonia.jpg",
+    imagemPrincipal: "images/velaG-peonia.jpg",
     variantes: [
       {
         idVar: "v1",
         nome: "Vela Peônia (30g)",
-        preco: 10.99,
-        imagem: "images/lembrancinha-peonia.jpg",
+        preco: 11.99,
+        imagem: "images/velaG-peonia.jpg",
       },
       {
         idVar: "v2",
         nome: "Vela Peônia (CAIXA)",
-        preco: 13.99,
+        preco: 14.99,
         imagem: "images/lembrancinha-peonia.jpg",
       },
     ],
@@ -1911,19 +2183,19 @@ const produtos = [
     nome: "Letra",
     desc: "",
     icon: "fa-house-chimney",
-    imagemPrincipal: "images/letra-cubo.jpg",
+    imagemPrincipal: "images/letra.jpg",
     variantes: [
       {
         idVar: "v1",
-        nome: "Quadrada",
-        preco: 2.0,
+        nome: "Cubo",
+        preco: 4.5,
         imagem: "images/letra-cubo.jpg",
       },
       {
         idVar: "v2",
         nome: "Redonda",
-        preco: 3.0,
-        imagem: "images/lembrancinha-.jpg",
+        preco: 5.0,
+        imagem: "images/lembrancinha-personalizada.jpg",
       },
     ],
   },
@@ -1939,7 +2211,7 @@ const produtos = [
       {
         idVar: "v1",
         nome: "",
-        preco: 3.0,
+        preco: 5.0,
         imagem: "images/minipudim.jpg",
       },
     ],
@@ -1956,7 +2228,7 @@ const produtos = [
       {
         idVar: "v1",
         nome: "",
-        preco: 3.0,
+        preco: 5.0,
         imagem: "images/minisabonete.jpg",
       },
     ],
@@ -1973,7 +2245,7 @@ const produtos = [
       {
         idVar: "v1",
         nome: "",
-        preco: 10.65,
+        preco: 13.99,
         imagem: "images/vela-p.jpg",
       },
     ],
@@ -1982,7 +2254,7 @@ const produtos = [
     id: 77,
     cat: "presentes",
     subcat: "lembrancinha",
-    nome: "Sabonete Líquido",
+    nome: "Mini Sabonete Líquido",
     desc: "",
     icon: "fa-house-chimney",
     imagemPrincipal: "images/miniliquido.jpg",
@@ -1990,7 +2262,7 @@ const produtos = [
       {
         idVar: "v1",
         nome: "",
-        preco: 4.35,
+        preco: 5.3,
         imagem: "images/.jpg",
       },
     ],
@@ -1999,7 +2271,7 @@ const produtos = [
     id: 78,
     cat: "presentes",
     subcat: "lembrancinha",
-    nome: "Geleia de Banho",
+    nome: "Mini Geleia de Banho",
     desc: "",
     icon: "fa-house-chimney",
     imagemPrincipal: "images/minigeleia.jpg",
@@ -2007,7 +2279,7 @@ const produtos = [
       {
         idVar: "v1",
         nome: "",
-        preco: 4.79,
+        preco: 5.85,
         imagem: "images/.jpg",
       },
     ],
@@ -2016,7 +2288,7 @@ const produtos = [
     id: 79,
     cat: "presentes",
     subcat: "lembrancinha",
-    nome: "Flores",
+    nome: "Mini Flor",
     desc: "",
     icon: "fa-house-chimney",
     imagemPrincipal: "images/miniflor-p.jpg",
@@ -2024,20 +2296,20 @@ const produtos = [
       {
         idVar: "v1",
         nome: "Tamanho (P)",
-        preco: 1.6,
+        preco: 3.0,
         imagem: "images/miniflor-p.jpg",
       },
       {
         idVar: "v2",
         nome: "Tamanho (M)",
-        preco: 3.5,
+        preco: 5.0,
         imagem: "images/miniflor-m.jpg",
       },
       {
         idVar: "v3",
         nome: "Rosa (50g)",
-        preco: 1000,
-        imagem: "",
+        preco: 5.0,
+        imagem: "images/miniflor-rosa.jpg",
       },
     ],
   },
@@ -2053,7 +2325,7 @@ const produtos = [
       {
         idVar: "v1",
         nome: "",
-        preco: 2.5,
+        preco: 3.99,
         imagem: "images/lembrancinha-.jpg",
       },
     ],
@@ -2065,13 +2337,59 @@ const produtos = [
     nome: "Vela Lata",
     desc: "",
     icon: "fa-house-chimney",
-    imagemPrincipal: "images/lembrancinha-.jpg",
+    imagemPrincipal: "images/lembrancinha-velalata.jpg",
     variantes: [
       {
         idVar: "v1",
         nome: "",
-        preco: 1000.0,
-        imagem: "images/lembrancinha-.jpg",
+        preco: 4.99,
+        imagem: "images/lembrancinha-velalata.jpg",
+      },
+    ],
+  },
+  {
+    id: 84,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Deus é fiel",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/deusfiel.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "1 UNIDADE",
+        preco: 3.0,
+        imagem: "images/deusfiel.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "10 UNIDADES",
+        preco: 30.0,
+        imagem: "images/deusfiel.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "20 UNIDADES",
+        preco: 300.0,
+        imagem: "images/deusfiel.jpg",
+      },
+    ],
+  },
+  {
+    id: 85,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Lembrancinha Personalizada",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/personalize-lembrancinha.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 0,
+        imagem: "",
       },
     ],
   },
