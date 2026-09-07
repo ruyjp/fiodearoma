@@ -592,7 +592,7 @@ const produtos = [
     ],
   },
   {
-    id: 18,
+    id: 19,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Flor de Cerejeira",
@@ -620,7 +620,7 @@ const produtos = [
 
   // Sabonetes Especiais
   {
-    id: 18,
+    id: 20,
     cat: "corpoBanho",
     subcat: "especiais",
     nome: "Caipirinha",
@@ -646,7 +646,7 @@ const produtos = [
     ],
   },
   {
-    id: 19,
+    id: 21,
     cat: "corpoBanho",
     subcat: "especiais",
     nome: "Camomila & Lavanda Francesa",
@@ -672,7 +672,7 @@ const produtos = [
     ],
   },
   {
-    id: 20,
+    id: 22,
     cat: "corpoBanho",
     subcat: "especiais",
     nome: "Majestade",
@@ -698,7 +698,7 @@ const produtos = [
     ],
   },
   {
-    id: 21,
+    id: 23,
     cat: "corpoBanho",
     subcat: "especiais",
     nome: "Melancia e menta",
@@ -712,7 +712,7 @@ const produtos = [
     ],
   },
   {
-    id: 22,
+    id: 24,
     cat: "corpoBanho",
     subcat: "especiais",
     nome: "Aveia e mel",
@@ -726,7 +726,7 @@ const produtos = [
     ],
   },
   {
-    id: 999,
+    id: 25,
     cat: "corpoBanho",
     subcat: "especiais",
     nome: "Cereja & Bergamota",
@@ -740,7 +740,7 @@ const produtos = [
     ],
   },
   {
-    id: 999,
+    id: 26,
     cat: "corpoBanho",
     subcat: "especiais",
     nome: "Morango Cremoso",
@@ -754,7 +754,7 @@ const produtos = [
     ],
   },
   {
-    id: 999,
+    id: 27,
     cat: "corpoBanho",
     subcat: "especiais",
     nome: "Menta & Alecrim",
@@ -768,7 +768,7 @@ const produtos = [
     ],
   },
   {
-    id: 999,
+    id: 28,
     cat: "corpoBanho",
     subcat: "especiais",
     nome: "Veludo de Cereja",
@@ -784,7 +784,7 @@ const produtos = [
 
   // Sabonetes Específicos
   {
-    id: 23,
+    id: 29,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Enxofre",
@@ -805,7 +805,7 @@ const produtos = [
     ],
   },
   {
-    id: 24,
+    id: 30,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Enxofre, Açafrão & Argila Branca",
@@ -821,7 +821,7 @@ const produtos = [
     ],
   },
   {
-    id: 25,
+    id: 31,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Açafrão",
@@ -838,7 +838,7 @@ const produtos = [
     ],
   },
   {
-    id: 26,
+    id: 32,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Argila",
@@ -927,7 +927,7 @@ const produtos = [
     ],
   },
   {
-    id: 27,
+    id: 33,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Carvão & Branca",
@@ -945,7 +945,7 @@ const produtos = [
 
   // Energéticos
   {
-    id: 28,
+    id: 34,
     cat: "corpoBanho",
     subcat: "energeticos",
     nome: "Sabonete Energético",
@@ -994,7 +994,7 @@ const produtos = [
 
   // Body Splash
   {
-    id: 29,
+    id: 35,
     cat: "perfumaria",
     subcat: "splash",
     nome: "Body Splash (120ml)",
@@ -1035,7 +1035,7 @@ const produtos = [
     ],
   },
   {
-    id: 30,
+    id: 36,
     cat: "perfumaria",
     subcat: "splash",
     nome: "Body Splash (REFIL)",
@@ -1054,7 +1054,7 @@ const produtos = [
 
   // Sabonete Mami Baby
   {
-    id: 31,
+    id: 37,
     cat: "infantil",
     nome: "Sabonetes Mami Baby",
     desc: "Fórmula suave",
@@ -1095,7 +1095,7 @@ const produtos = [
   },
   // Geleias de Banho
   {
-    id: 32,
+    id: 38,
     cat: "corpoBanho",
     subcat: "geleia",
     nome: "Geleias de Banho (200ml)",
@@ -1135,10 +1135,27 @@ const produtos = [
       },
     ],
   },
+  {
+    id: 39,
+    cat: "corpoBanho",
+    subcat: "geleia",
+    nome: "Geleia de Banho (Refil)",
+    desc: "Esfoliante e hidratante feito com manteiga corporal",
+    icon: "fa-bottle-droplet",
+    imagemPrincipal: "images/geleia-refil.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 19.99,
+        imagem: "",
+      },
+    ],
+  },
 
   // Sabonete Líquido
   {
-    id: 33,
+    id: 40,
     cat: "corpoBanho",
     subcat: "liquido",
     nome: "Sabonete Líquido (100ml)",
@@ -1185,7 +1202,7 @@ const produtos = [
     ],
   },
   {
-    id: 933,
+    id: 41,
     cat: "corpoBanho",
     subcat: "liquido",
     nome: "Sabonete Liquido (Refil)",
@@ -1204,7 +1221,7 @@ const produtos = [
 
   // Sabonete Esfoliante
   {
-    id: 35,
+    id: 42,
     cat: "corpoBanho",
     subcat: "colher",
     nome: "Sabonete Esfoliante (150g)",
@@ -1233,7 +1250,7 @@ const produtos = [
     ],
   },
   {
-    id: 935,
+    id: 43,
     cat: "corpoBanho",
     subcat: "colher",
     nome: "Sabonete Esfoliante (Refil)",
@@ -1252,7 +1269,7 @@ const produtos = [
 
   // Espuma de barbear
   {
-    id: 36,
+    id: 44,
     cat: "masculina",
     subcat: "barba",
     nome: "Espuma de Barbear (100ml)",
@@ -1269,7 +1286,7 @@ const produtos = [
     ],
   },
   {
-    id: 37,
+    id: 45,
     cat: "masculina",
     subcat: "barba",
     nome: "Loção Pós-Barba (100ml)",
@@ -1288,7 +1305,7 @@ const produtos = [
 
   // Sabonetes masculinos
   {
-    id: 38,
+    id: 46,
     cat: "masculina",
     subcat: "saboneteMasculino",
     nome: "Sabonetes Masculinos (100g)",
@@ -1319,7 +1336,7 @@ const produtos = [
 
   // Água de tecido
   {
-    id: 39,
+    id: 47,
     cat: "casa",
     subcat: "tecido",
     nome: "Água de Tecido (100ml)",
@@ -1355,7 +1372,7 @@ const produtos = [
   },
 
   {
-    id: 40,
+    id: 48,
     cat: "casa",
     subcat: "tecido",
     nome: "Água de Tecido (REFIL)",
@@ -1374,7 +1391,7 @@ const produtos = [
 
   // Home Spray
   {
-    id: 41,
+    id: 49,
     cat: "casa",
     subcat: "homeSpray",
     nome: "Home Spray (100ml)",
@@ -1403,7 +1420,7 @@ const produtos = [
     ],
   },
   {
-    id: 42,
+    id: 50,
     cat: "casa",
     subcat: "homeSpray",
     nome: "Home Spray (REFIL)",
@@ -1422,7 +1439,7 @@ const produtos = [
 
   // Difusor de varetas
   {
-    id: 43,
+    id: 51,
     cat: "casa",
     subcat: "difusor",
     nome: "Difusor de Varetas (100ml)",
@@ -1457,7 +1474,7 @@ const produtos = [
     ],
   },
   {
-    id: 44,
+    id: 52,
     cat: "casa",
     subcat: "difusor",
     nome: "Difusore de Varetas (REFIL)",
@@ -1476,7 +1493,7 @@ const produtos = [
 
   // Vela artesanal G
   {
-    id: 45,
+    id: 53,
     cat: "casa",
     subcat: "velaG",
     nome: "Vela G (130g)",
@@ -1541,7 +1558,7 @@ const produtos = [
     ],
   },
   {
-    id: 46,
+    id: 54,
     cat: "casa",
     subcat: "velaG",
     nome: "Vela Especial<br> Morango com Champanhe (150g) ",
@@ -1557,7 +1574,7 @@ const produtos = [
     ],
   },
   {
-    id: 47,
+    id: 55,
     cat: "casa",
     subcat: "velaG",
     nome: "Vela Peônia (80g)",
@@ -1573,7 +1590,7 @@ const produtos = [
     ],
   },
   {
-    id: 48,
+    id: 56,
     cat: "casa",
     subcat: "velaG",
     nome: "Vela G (REFIL)",
@@ -1592,7 +1609,7 @@ const produtos = [
 
   // Aromatizador de carro
   {
-    id: 49,
+    id: 57,
     cat: "casa",
     subcat: "carro",
     nome: "Aromatizador de carro",
@@ -1615,7 +1632,7 @@ const produtos = [
     ],
   },
   {
-    id: 50,
+    id: 58,
     cat: "casa",
     subcat: "carro",
     nome: "Aromatizador de carro (REFIL)",
@@ -1634,7 +1651,7 @@ const produtos = [
 
   // Perfume de cabelo
   {
-    id: 51,
+    id: 59,
     cat: "perfumaria",
     subcat: "cabelo",
     nome: "Perfume de Cabelo",
@@ -1651,7 +1668,7 @@ const produtos = [
     ],
   },
   {
-    id: 52,
+    id: 60,
     cat: "perfumaria",
     subcat: "cabelo",
     nome: "Perfume de cabelo (REFIL)",
@@ -1670,7 +1687,7 @@ const produtos = [
 
   // Kits
   {
-    id: 53,
+    id: 61,
     cat: "presentes",
     subcat: "kits",
     nome: "UM Sabonete sortido<br> +<br> UMA Bucha de Nylon",
@@ -1687,7 +1704,7 @@ const produtos = [
     ],
   },
   {
-    id: 54,
+    id: 62,
     cat: "presentes",
     subcat: "kits",
     nome: "TRÊS Sabonetes de frutas sortidos<br> +<br> UMA Bucha de Nylon",
@@ -1704,7 +1721,7 @@ const produtos = [
     ],
   },
   {
-    id: 55,
+    id: 63,
     cat: "presentes",
     subcat: "kits",
     nome: "QUATRO Sabonetes sortidos",
@@ -1721,7 +1738,7 @@ const produtos = [
     ],
   },
   {
-    id: 56,
+    id: 64,
     cat: "presentes",
     subcat: "kits",
     nome: "CINCO Sabonetes de frutas sortidos",
@@ -1738,7 +1755,7 @@ const produtos = [
     ],
   },
   {
-    id: 57,
+    id: 65,
     cat: "presentes",
     subcat: "kits",
     nome: "Copo com UM Cacho de Sabonete",
@@ -1755,7 +1772,7 @@ const produtos = [
     ],
   },
   {
-    id: 58,
+    id: 66,
     cat: "presentes",
     subcat: "kits",
     nome: "Caixa com UM Cacho de Sabonete",
@@ -1772,7 +1789,7 @@ const produtos = [
     ],
   },
   {
-    id: 59,
+    id: 67,
     cat: "presentes",
     subcat: "kits",
     nome: "Kit de Algodão",
@@ -1789,7 +1806,7 @@ const produtos = [
     ],
   },
   {
-    id: 60,
+    id: 68,
     cat: "presentes",
     subcat: "kits",
     nome: "Monte seu Kit",
@@ -1808,7 +1825,7 @@ const produtos = [
 
   // Lembrancinhas
   {
-    id: 61,
+    id: 69,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Coração",
@@ -1831,7 +1848,7 @@ const produtos = [
     ],
   },
   {
-    id: 62,
+    id: 70,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Pezinhos",
@@ -1848,7 +1865,7 @@ const produtos = [
     ],
   },
   {
-    id: 63,
+    id: 71,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Lembrancinhas Personalizadas",
@@ -1865,7 +1882,7 @@ const produtos = [
     ],
   },
   {
-    id: 64,
+    id: 72,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Vela Especial Peônia",
@@ -1888,7 +1905,7 @@ const produtos = [
     ],
   },
   {
-    id: 65,
+    id: 73,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Letra",
@@ -1911,7 +1928,7 @@ const produtos = [
     ],
   },
   {
-    id: 66,
+    id: 74,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Mini Pudim",
@@ -1928,7 +1945,7 @@ const produtos = [
     ],
   },
   {
-    id: 67,
+    id: 75,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Mini Sabonete",
@@ -1945,7 +1962,7 @@ const produtos = [
     ],
   },
   {
-    id: 68,
+    id: 76,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Vela P (40g)",
@@ -1962,7 +1979,7 @@ const produtos = [
     ],
   },
   {
-    id: 69,
+    id: 77,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Sabonete Líquido",
@@ -1979,7 +1996,7 @@ const produtos = [
     ],
   },
   {
-    id: 70,
+    id: 78,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Geleia de Banho",
@@ -1996,7 +2013,7 @@ const produtos = [
     ],
   },
   {
-    id: 71,
+    id: 79,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Flores",
@@ -2025,7 +2042,7 @@ const produtos = [
     ],
   },
   {
-    id: 72,
+    id: 80,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Escalda Pés",
@@ -2042,7 +2059,7 @@ const produtos = [
     ],
   },
   {
-    id: 73,
+    id: 81,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Vela Lata",
