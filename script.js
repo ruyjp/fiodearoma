@@ -2182,7 +2182,7 @@ const produtos = [
     nome: "Vela Peônia (30g) na CAIXA",
     desc: "",
     icon: "fa-house-chimney",
-    imagemPrincipal: "images/velaG-peonia.jpg",
+    imagemPrincipal: "images/lembrancinha-peonia.jpg",
     variantes: [
       {
         idVar: "v1",
@@ -2671,7 +2671,7 @@ const produtos = [
     id: 86,
     cat: "presentes",
     subcat: "lembrancinha",
-    nome: "Vela Lata",
+    nome: "Vela em Latinha",
     desc: "",
     icon: "fa-house-chimney",
     imagemPrincipal: "images/lembrancinha-velalata.jpg",
