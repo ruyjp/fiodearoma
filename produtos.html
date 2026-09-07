@@ -283,7 +283,8 @@
         right: -100%;
         width: 400px;
         max-width: 90%;
-        height: 100vh;
+        height: 100%;
+        height: 100dvh;
         background: #fff;
         box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
         z-index: 2000;
@@ -355,6 +356,7 @@
       }
       .cart-footer {
         padding: 25px;
+        padding-bottom: calc(25px + env(safe-area-inset-bottom));
         background: var(--bg-color);
         border-top: 1px solid var(--border-color);
       }
@@ -653,7 +655,9 @@
           flex-direction: column;
           align-items: center;
           padding: 15px;
-          position: relative; /* Isso permite fixar o carrinho solto ali dentro */
+          position: sticky;
+          top: 0;
+          z-index: 1000;
         }
 
         .logo {
@@ -661,14 +665,11 @@
           text-align: center;
         }
 
-        /* CARRINHO TIPO APP: Fixo no topo direito */
         .cart-icon {
           position: absolute;
           top: 15px;
           right: 15px;
-          transform: scale(
-            0.9
-          ); /* Deixa um pouquinho mais delicado na telinha */
+          transform: scale(0.9);
         }
 
         /* Botão "Início" na aba de produtos */
