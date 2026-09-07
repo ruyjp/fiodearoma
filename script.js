@@ -122,7 +122,6 @@ const categoriasLayout = [
 ];
 
 const produtos = [
-  // Sabonetes Perfumados
   {
     id: 1,
     cat: "corpoBanho",
@@ -608,7 +607,6 @@ const produtos = [
     ],
   },
 
-  // Sabonetes Especiais
   {
     id: 20,
     cat: "corpoBanho",
@@ -843,8 +841,6 @@ const produtos = [
       },
     ],
   },
-
-  // Sabonetes Específicos
   {
     id: 29,
     cat: "corpoBanho",
@@ -971,7 +967,7 @@ const produtos = [
     ],
   },
   {
-    id: 82,
+    id: 33,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Carvão Ativado (70g)",
@@ -988,7 +984,7 @@ const produtos = [
     ],
   },
   {
-    id: 83,
+    id: 34,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Dolomita (70g)",
@@ -1005,7 +1001,7 @@ const produtos = [
     ],
   },
   {
-    id: 33,
+    id: 35,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Carvão Ativado & Argila Branca",
@@ -1020,10 +1016,8 @@ const produtos = [
       },
     ],
   },
-
-  // Sabonetes Energéticos
   {
-    id: 34,
+    id: 36,
     cat: "corpoBanho",
     subcat: "energeticos",
     nome: "Sabonete Energético",
@@ -1070,9 +1064,8 @@ const produtos = [
     ],
   },
 
-  // Body Splash
   {
-    id: 35,
+    id: 37,
     cat: "perfumaria",
     subcat: "splash",
     nome: "Body Splash (120ml)",
@@ -1113,7 +1106,7 @@ const produtos = [
     ],
   },
   {
-    id: 36,
+    id: 38,
     cat: "perfumaria",
     subcat: "splash",
     nome: "Body Splash (REFIL)",
@@ -1153,10 +1146,8 @@ const produtos = [
       },
     ],
   },
-
-  // Sabonete Mami Baby
   {
-    id: 37,
+    id: 39,
     cat: "infantil",
     nome: "Sabonetes Mami Baby",
     desc: "Fórmula suave",
@@ -1195,10 +1186,8 @@ const produtos = [
       },
     ],
   },
-
-  // Geleias de Banho
   {
-    id: 38,
+    id: 40,
     cat: "corpoBanho",
     subcat: "geleia",
     nome: "Geleias de Banho (200ml)",
@@ -1239,7 +1228,7 @@ const produtos = [
     ],
   },
   {
-    id: 39,
+    id: 41,
     cat: "corpoBanho",
     subcat: "geleia",
     nome: "Geleia de Banho (Refil)",
@@ -1279,10 +1268,8 @@ const produtos = [
       },
     ],
   },
-
-  // Sabonete Líquido
   {
-    id: 40,
+    id: 42,
     cat: "corpoBanho",
     subcat: "liquido",
     nome: "Sabonete Líquido (100ml)",
@@ -1329,7 +1316,7 @@ const produtos = [
     ],
   },
   {
-    id: 41,
+    id: 43,
     cat: "corpoBanho",
     subcat: "liquido",
     nome: "Sabonete Liquido (Refil)",
@@ -1375,10 +1362,8 @@ const produtos = [
       },
     ],
   },
-
-  // Sabonete Esfoliante
   {
-    id: 42,
+    id: 44,
     cat: "corpoBanho",
     subcat: "colher",
     nome: "Sabonete Esfoliante (150g)",
@@ -1407,7 +1392,7 @@ const produtos = [
     ],
   },
   {
-    id: 43,
+    id: 45,
     cat: "corpoBanho",
     subcat: "colher",
     nome: "Sabonete Esfoliante (Refil)",
@@ -1435,10 +1420,8 @@ const produtos = [
       },
     ],
   },
-
-  // Espuma de barbear
   {
-    id: 44,
+    id: 46,
     cat: "masculina",
     subcat: "barba",
     nome: "Espuma de Barbear (100ml)",
@@ -1455,7 +1438,7 @@ const produtos = [
     ],
   },
   {
-    id: 45,
+    id: 47,
     cat: "masculina",
     subcat: "barba",
     nome: "Loção Pós-Barba (100ml)",
@@ -1471,10 +1454,8 @@ const produtos = [
       },
     ],
   },
-
-  // Sabonetes masculinos
   {
-    id: 46,
+    id: 48,
     cat: "masculina",
     subcat: "saboneteMasculino",
     nome: "Sabonetes Masculinos (100g)",
@@ -1502,10 +1483,8 @@ const produtos = [
       },
     ],
   },
-
-  // Água de tecido
   {
-    id: 47,
+    id: 49,
     cat: "casa",
     subcat: "tecido",
     nome: "Água de Tecido (100ml)",
@@ -1539,9 +1518,8 @@ const produtos = [
       },
     ],
   },
-
   {
-    id: 48,
+    id: 50,
     cat: "casa",
     subcat: "tecido",
     nome: "Água de Tecido (REFIL)",
@@ -1575,10 +1553,8 @@ const produtos = [
       },
     ],
   },
-
-  // Home Spray
   {
-    id: 49,
+    id: 51,
     cat: "casa",
     subcat: "homeSpray",
     nome: "Home Spray (100ml)",
@@ -1607,7 +1583,7 @@ const produtos = [
     ],
   },
   {
-    id: 50,
+    id: 52,
     cat: "casa",
     subcat: "homeSpray",
     nome: "Home Spray (REFIL)",
@@ -1635,10 +1611,8 @@ const produtos = [
       },
     ],
   },
-
-  // Difusor de varetas
   {
-    id: 51,
+    id: 53,
     cat: "casa",
     subcat: "difusor",
     nome: "Difusor de Varetas (100ml)",
@@ -1673,7 +1647,7 @@ const produtos = [
     ],
   },
   {
-    id: 52,
+    id: 55,
     cat: "casa",
     subcat: "difusor",
     nome: "Difusore de Varetas (REFIL)",
@@ -1707,10 +1681,8 @@ const produtos = [
       },
     ],
   },
-
-  // Vela artesanal G
   {
-    id: 53,
+    id: 56,
     cat: "casa",
     subcat: "velaG",
     nome: "Vela G (130g)",
@@ -1775,7 +1747,7 @@ const produtos = [
     ],
   },
   {
-    id: 54,
+    id: 57,
     cat: "casa",
     subcat: "velaG",
     nome: "Vela Especial<br> Morango com Champanhe (150g) ",
@@ -1791,29 +1763,7 @@ const produtos = [
     ],
   },
   {
-    id: 55,
-    cat: "casa",
-    subcat: "velaG",
-    nome: "Vela Peônia (80g)",
-    desc: "",
-    icon: "fa-house-chimney",
-    imagemPrincipal: "images/velaG-peonia.jpg",
-    variantes: [
-      {
-        idVar: "v1",
-        nome: "Vela Peônia (80g)",
-        preco: 17.99,
-      },
-      {
-        idVar: "v2",
-        nome: "Vela Peônia na Caixa",
-        preco: 20.99,
-        imagem: "images/lembrancinha-peonia.jpg",
-      },
-    ],
-  },
-  {
-    id: 56,
+    id: 58,
     cat: "casa",
     subcat: "velaG",
     nome: "Vela G (REFIL)",
@@ -1877,10 +1827,8 @@ const produtos = [
       },
     ],
   },
-
-  // Aromatizador de carro
   {
-    id: 57,
+    id: 59,
     cat: "casa",
     subcat: "carro",
     nome: "Aromatizador de carro",
@@ -1903,7 +1851,7 @@ const produtos = [
     ],
   },
   {
-    id: 58,
+    id: 60,
     cat: "casa",
     subcat: "carro",
     nome: "Aromatizador de carro (REFIL)",
@@ -1925,10 +1873,8 @@ const produtos = [
       },
     ],
   },
-
-  // Perfume de cabelo
   {
-    id: 59,
+    id: 61,
     cat: "perfumaria",
     subcat: "cabelo",
     nome: "(EM BREVE) Perfume de Cabelo",
@@ -1945,7 +1891,7 @@ const produtos = [
     ],
   },
   {
-    id: 60,
+    id: 62,
     cat: "perfumaria",
     subcat: "cabelo",
     nome: "(EM BREVE) Perfume de cabelo (REFIL)",
@@ -1962,9 +1908,8 @@ const produtos = [
     ],
   },
 
-  // Kits
   {
-    id: 61,
+    id: 63,
     cat: "presentes",
     subcat: "kits",
     nome: "UM Sabonete sortido<br> +<br> UMA Bucha de Nylon",
@@ -1981,7 +1926,7 @@ const produtos = [
     ],
   },
   {
-    id: 62,
+    id: 64,
     cat: "presentes",
     subcat: "kits",
     nome: "TRÊS Sabonetes de frutas sortidos<br> +<br> UMA Bucha de Nylon",
@@ -1998,7 +1943,7 @@ const produtos = [
     ],
   },
   {
-    id: 63,
+    id: 65,
     cat: "presentes",
     subcat: "kits",
     nome: "QUATRO Sabonetes sortidos",
@@ -2015,7 +1960,7 @@ const produtos = [
     ],
   },
   {
-    id: 64,
+    id: 66,
     cat: "presentes",
     subcat: "kits",
     nome: "CINCO Sabonetes de frutas sortidos",
@@ -2032,7 +1977,7 @@ const produtos = [
     ],
   },
   {
-    id: 65,
+    id: 67,
     cat: "presentes",
     subcat: "kits",
     nome: "Copo com UM Cacho de Sabonete",
@@ -2049,7 +1994,7 @@ const produtos = [
     ],
   },
   {
-    id: 66,
+    id: 68,
     cat: "presentes",
     subcat: "kits",
     nome: "Caixa com UM Cacho de Sabonete",
@@ -2066,7 +2011,7 @@ const produtos = [
     ],
   },
   {
-    id: 67,
+    id: 69,
     cat: "presentes",
     subcat: "kits",
     nome: "Kit de Algodão",
@@ -2083,7 +2028,7 @@ const produtos = [
     ],
   },
   {
-    id: 68,
+    id: 70,
     cat: "presentes",
     subcat: "kits",
     nome: "Monte seu Kit",
@@ -2100,9 +2045,8 @@ const produtos = [
     ],
   },
 
-  // Lembrancinhas
   {
-    id: 69,
+    id: 71,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "15 Anos",
@@ -2144,7 +2088,7 @@ const produtos = [
   },
 
   {
-    id: 70,
+    id: 72,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Pezinhos",
@@ -2185,7 +2129,7 @@ const produtos = [
     ],
   },
   {
-    id: 71,
+    id: 73,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Vela Peônia (30g)",
@@ -2232,10 +2176,10 @@ const produtos = [
     ],
   },
   {
-    id: 72,
+    id: 74,
     cat: "presentes",
     subcat: "lembrancinha",
-    nome: "Vela Peônia (30g) - CAIXA",
+    nome: "Vela Peônia (30g) na CAIXA",
     desc: "",
     icon: "fa-house-chimney",
     imagemPrincipal: "images/velaG-peonia.jpg",
@@ -2279,7 +2223,7 @@ const produtos = [
     ],
   },
   {
-    id: 73,
+    id: 75,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Letra em Cubo",
@@ -2320,7 +2264,7 @@ const produtos = [
     ],
   },
   {
-    id: 73,
+    id: 76,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Letra Redonda",
@@ -2332,36 +2276,36 @@ const produtos = [
         idVar: "v1",
         nome: "1 a 10 unidades",
         preco: 5,
-        imagem: "images/letra-cubo.jpg",
+        imagem: "images/letra-redonda.jpg",
       },
       {
         idVar: "v2",
         nome: "11 a 30 unidades",
         preco: 4.75,
-        imagem: "images/letra-cubo.jpg",
+        imagem: "images/letra-redonda.jpg",
       },
       {
         idVar: "v3",
         nome: "31 a 50 unidades",
         preco: 4.39,
-        imagem: "images/letra-cubo.jpg",
+        imagem: "images/letra-redonda.jpg",
       },
       {
         idVar: "v4",
         nome: "51 a 75 unidades",
         preco: 3.89,
-        imagem: "images/letra-cubo.jpg",
+        imagem: "images/letra-redonda.jpg",
       },
       {
         idVar: "v5",
         nome: "76 a 100 unidades",
         preco: 3.5,
-        imagem: "images/letra-cubo.jpg",
+        imagem: "images/letra-redonda.jpg",
       },
     ],
   },
   {
-    id: 74,
+    id: 77,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Mini Pudim",
@@ -2402,7 +2346,7 @@ const produtos = [
     ],
   },
   {
-    id: 74,
+    id: 78,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Mini Rosa",
@@ -2443,7 +2387,7 @@ const produtos = [
     ],
   },
   {
-    id: 75,
+    id: 79,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Mini Sabonete Oval",
@@ -2484,24 +2428,54 @@ const produtos = [
     ],
   },
   {
-    id: 76,
+    id: 80,
     cat: "presentes",
     subcat: "lembrancinha",
-    nome: "Vela P (40g)",
+    nome: "Vela no Vidro (40g)",
     desc: "",
     icon: "fa-house-chimney",
     imagemPrincipal: "images/vela-p.jpg",
     variantes: [
       {
         idVar: "v1",
-        nome: "",
+        nome: "1 a 10 unidades",
         preco: 13.99,
+        imagem: "images/vela-p.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "11 a 20 unidades",
+        preco: 13.26,
+        imagem: "images/vela-p.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "21 a 40 unidades",
+        preco: 12.76,
+        imagem: "images/vela-p.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "41 a 50 unidades",
+        preco: 12.29,
+        imagem: "images/vela-p.jpg",
+      },
+      {
+        idVar: "v5",
+        nome: "51 a 75 unidades",
+        preco: 11.89,
+        imagem: "images/vela-p.jpg",
+      },
+      {
+        idVar: "v6",
+        nome: "76 a 100 unidades",
+        preco: 11.29,
         imagem: "images/vela-p.jpg",
       },
     ],
   },
   {
-    id: 77,
+    id: 81,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Mini Sabonete Líquido",
@@ -2511,14 +2485,32 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
+        nome: "1 a 10 unidades",
         preco: 5.3,
-        imagem: "images/.jpg",
+        imagem: "images/miniliquido.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "11 a 20 unidades",
+        preco: 4.95,
+        imagem: "images/miniliquido.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "21 a 30 unidades",
+        preco: 4.55,
+        imagem: "images/miniliquido.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "31 a 50 unidades",
+        preco: 4.35,
+        imagem: "images/miniliquido.jpg",
       },
     ],
   },
   {
-    id: 78,
+    id: 82,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Mini Geleia de Banho",
@@ -2528,14 +2520,32 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
+        nome: "1 a 10 unidades",
         preco: 5.85,
-        imagem: "images/.jpg",
+        imagem: "images/minigeleia.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "11 a 20 unidades",
+        preco: 5.25,
+        imagem: "images/minigeleia.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "21 a 30 unidades",
+        preco: 4.95,
+        imagem: "images/minigeleia.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "31 a 50 unidades",
+        preco: 4.7,
+        imagem: "images/minigeleia.jpg",
       },
     ],
   },
   {
-    id: 79,
+    id: 83,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Mini Flor (M)",
@@ -2547,36 +2557,36 @@ const produtos = [
         idVar: "v1",
         nome: "1 a 10 unidades",
         preco: 5.0,
-        imagem: "images/minisabonete.jpg",
+        imagem: "images/miniflor-m.jpg",
       },
       {
         idVar: "v2",
         nome: "11 a 30 unidades",
         preco: 4.6,
-        imagem: "images/minisabonete.jpg",
+        imagem: "images/miniflor-m.jpg",
       },
       {
         idVar: "v3",
         nome: "31 a 50 unidades",
         preco: 4.1,
-        imagem: "images/minisabonete.jpg",
+        imagem: "images/miniflor-m.jpg",
       },
       {
         idVar: "v4",
         nome: "51 a 75 unidades",
         preco: 3.65,
-        imagem: "images/minisabonete.jpg",
+        imagem: "images/miniflor-m.jpg",
       },
       {
         idVar: "v5",
         nome: "76 a 100 unidades",
         preco: 3.2,
-        imagem: "images/minisabonete.jpg",
+        imagem: "images/miniflor-m.jpg",
       },
     ],
   },
   {
-    id: 86,
+    id: 84,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Mini Flor (P)",
@@ -2617,24 +2627,48 @@ const produtos = [
     ],
   },
   {
-    id: 80,
+    id: 85,
     cat: "presentes",
     subcat: "lembrancinha",
-    nome: "Escalda Pés",
+    nome: "Escalda Pés (40g)",
     desc: "",
     icon: "fa-house-chimney",
     imagemPrincipal: "images/escalda-pe.jpg",
     variantes: [
       {
         idVar: "v1",
-        nome: "",
+        nome: "1 a 10 unidades",
         preco: 3.99,
-        imagem: "images/lembrancinha-.jpg",
+        imagem: "images/escalda-pe.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "11 a 30 unidades",
+        preco: 3.69,
+        imagem: "images/escalda-pe.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "31 a 50 unidades",
+        preco: 3.29,
+        imagem: "images/escalda-pe.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "51 a 75 unidades",
+        preco: 2.99,
+        imagem: "images/escalda-pe.jpg",
+      },
+      {
+        idVar: "v5",
+        nome: "76 a 100 unidades",
+        preco: 2.79,
+        imagem: "images/escalda-pe.jpg",
       },
     ],
   },
   {
-    id: 81,
+    id: 86,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Vela Lata",
@@ -2644,14 +2678,32 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
+        nome: "1 a 20 unidades",
         preco: 4.99,
+        imagem: "images/lembrancinha-velalata.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "21 a 49 unidades",
+        preco: 4.59,
+        imagem: "images/lembrancinha-velalata.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "50 a 80 unidades",
+        preco: 3.99,
+        imagem: "images/lembrancinha-velalata.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "81 a 100 unidades",
+        preco: 3.59,
         imagem: "images/lembrancinha-velalata.jpg",
       },
     ],
   },
   {
-    id: 84,
+    id: 87,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Deus é fiel",
@@ -2692,7 +2744,7 @@ const produtos = [
     ],
   },
   {
-    id: 85,
+    id: 88,
     cat: "presentes",
     subcat: "lembrancinha",
     nome: "Lembrancinha Personalizada",
@@ -2705,6 +2757,100 @@ const produtos = [
         nome: "",
         preco: 0,
         imagem: "",
+      },
+    ],
+  },
+  {
+    id: 89,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Vela Peônia (80g)",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/velaG-peonia.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "1 a 10 unidades",
+        preco: 17.99,
+        imagem: "images/velaG-peonia.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "11 a 20 unidades",
+        preco: 16.26,
+        imagem: "images/velaG-peonia.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "21 a 40 unidades",
+        preco: 15.76,
+        imagem: "images/velaG-peonia.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "41 a 50 unidades",
+        preco: 14.89,
+        imagem: "images/velaG-peonia.jpg",
+      },
+      {
+        idVar: "v5",
+        nome: "51 a 75 unidades",
+        preco: 13.89,
+        imagem: "images/velaG-peonia.jpg",
+      },
+      {
+        idVar: "v6",
+        nome: "76 a 100 unidades",
+        preco: 12.99,
+        imagem: "images/velaG-peonia.jpg",
+      },
+    ],
+  },
+  {
+    id: 90,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Vela Peônia (80g) na CAIXA",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/lembrancinha-peonia.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "1 a 10 unidades",
+        preco: 20.99,
+        imagem: "images/lembrancinha-peonia.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "11 a 20 unidades",
+        preco: 19.26,
+        imagem: "images/lembrancinha-peonia.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "21 a 40 unidades",
+        preco: 18.76,
+        imagem: "images/lembrancinha-peonia.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "41 a 50 unidades",
+        preco: 15.29,
+        imagem: "images/lembrancinha-peonia.jpg",
+      },
+      {
+        idVar: "v5",
+        nome: "51 a 75 unidades",
+        preco: 16.89,
+        imagem: "images/lembrancinha-peonia.jpg",
+      },
+      {
+        idVar: "v6",
+        nome: "76 a 100 unidades",
+        preco: 15.29,
+        imagem: "images/lembrancinha-peonia.jpg",
       },
     ],
   },
