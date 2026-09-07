@@ -22,7 +22,7 @@ const categoriasLayout = [
       },
       {
         id: "colher",
-        titulo: "Sabonete de Esfoliante",
+        titulo: "Sabonete Esfoliante",
         banner: "",
       },
       {
@@ -50,9 +50,6 @@ const categoriasLayout = [
       {
         id: "splash",
         titulo: "Body Splash",
-      },
-      {
-        id: "perfume",
       },
       {
         id: "cabelo",
@@ -97,19 +94,37 @@ const categoriasLayout = [
         id: "difusor",
         titulo: "Difusor de Varetas",
       },
+      {
+        id: "velaG",
+        titulo: "Velas Artesanais",
+      },
+      {
+        id: "carro",
+        titulo: "Aromatizador de Carro",
+      },
     ],
   },
   {
     id: "presentes",
     titulo: "Presentes",
     icone: "fa-gift",
+    subcategorias: [
+      {
+        id: "kits",
+        titulo: "Kits",
+      },
+      {
+        id: "lembrancinha",
+        titulo: "Lembrancinhas",
+      },
+    ],
   },
 ];
 
 const produtos = [
-  // 100 - Sabonetes Perfumados
+  // Sabonetes Perfumados
   {
-    id: 101,
+    id: 1,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Rosa Mosqueta",
@@ -117,13 +132,25 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/rosa-mosqueta.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 102,
+    id: 2,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Alecrim",
@@ -131,13 +158,25 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/alecrim.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 103,
+    id: 3,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Alecrim Blanc",
@@ -145,13 +184,25 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/alecrim-blanc.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 104,
+    id: 4,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Flor de Laranjeira",
@@ -159,13 +210,25 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/flor-laranjeira.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 105,
+    id: 5,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Algodão",
@@ -173,13 +236,25 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/algodao.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 106,
+    id: 6,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Bergamota",
@@ -187,13 +262,25 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/bergamota.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 107,
+    id: 7,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Macadâmia",
@@ -201,13 +288,25 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/macadamia.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 108,
+    id: 8,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Maracujá",
@@ -215,13 +314,25 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/maracuja.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 109,
+    id: 9,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Pitaya",
@@ -229,13 +340,25 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/pitaya.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 110,
+    id: 10,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Zarath",
@@ -243,13 +366,25 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/zarath.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 111,
+    id: 11,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Limão Siciliano",
@@ -257,13 +392,25 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/limao-siciliano.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 112,
+    id: 12,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Canela",
@@ -271,13 +418,25 @@ const produtos = [
     icon: "fa-spa",
     imagemPrincipal: "images/canela.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 113,
+    id: 13,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Lavanda Francesa",
@@ -285,13 +444,25 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/lavanda-francesa.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 114,
+    id: 14,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Erva-doce",
@@ -299,13 +470,25 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/erva-doce.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 115,
+    id: 15,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Morango",
@@ -313,13 +496,25 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/morango.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 116,
+    id: 16,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Melancia",
@@ -327,13 +522,25 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/melancia.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 117,
+    id: 17,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Menta",
@@ -341,13 +548,25 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/menta.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
   {
-    id: 118,
+    id: 18,
     cat: "corpoBanho",
     subcat: "perfumados",
     nome: "Camomila",
@@ -355,21 +574,111 @@ const produtos = [
     icon: "fa-leaf",
     imagemPrincipal: "images/camomila.jpg",
     variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
+    ],
+  },
+  {
+    id: 18,
+    cat: "corpoBanho",
+    subcat: "perfumados",
+    nome: "Flor de Cerejeira",
+    desc: "Suavidade e bem-estar.",
+    icon: "fa-leaf",
+    imagemPrincipal: "images/sabonete-florcerejeira.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 10.99,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 12.99,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 13.99,
+      },
     ],
   },
 
-  // 200 - Sabonetes Especiais
+  // Sabonetes Especiais
   {
-    id: 201,
+    id: 18,
     cat: "corpoBanho",
     subcat: "especiais",
     nome: "Caipirinha",
     desc: "Hidratação e revitalização.",
     icon: "fa-glass-citrus",
     imagemPrincipal: "images/caipirinha.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 11.49,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 13.49,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 14.49,
+      },
+    ],
+  },
+  {
+    id: 19,
+    cat: "corpoBanho",
+    subcat: "especiais",
+    nome: "Camomila & Lavanda Francesa",
+    desc: "Suavidade e maciez.",
+    icon: "fa-spa",
+    imagemPrincipal: "images/camomila-lavanda-francesa.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "Redondo (90g)",
+        preco: 11.49,
+      },
+      {
+        idVar: "v2",
+        nome: "Massageador (130g)",
+        preco: 13.49,
+      },
+      {
+        idVar: "v3",
+        nome: "Massageador com Bucha (130g)",
+        preco: 14.49,
+      },
+    ],
+  },
+  {
+    id: 20,
+    cat: "corpoBanho",
+    subcat: "especiais",
+    nome: "Majestade",
+    desc: "Hidratação e revitalização.",
+    icon: "fa-spa",
+    imagemPrincipal: "images/majestade.jpg",
     variantes: [
       {
         idVar: "v1",
@@ -389,35 +698,7 @@ const produtos = [
     ],
   },
   {
-    id: 202,
-    cat: "corpoBanho",
-    subcat: "especiais",
-    nome: "Camomila & Lavanda Francesa",
-    desc: "Suavidade e maciez.",
-    icon: "fa-spa",
-    imagemPrincipal: "images/camomila-lavanda-francesa.jpg",
-    variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
-    ],
-  },
-  {
-    id: 207,
-    cat: "corpoBanho",
-    subcat: "especiais",
-    nome: "Majestade",
-    desc: "Hidratação e revitalização.",
-    icon: "fa-spa",
-    imagemPrincipal: "images/majestade.jpg",
-    variantes: [
-      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
-      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
-    ],
-  },
-  {
-    id: 208,
+    id: 21,
     cat: "corpoBanho",
     subcat: "especiais",
     nome: "Melancia e menta",
@@ -431,7 +712,7 @@ const produtos = [
     ],
   },
   {
-    id: 209,
+    id: 22,
     cat: "corpoBanho",
     subcat: "especiais",
     nome: "Aveia e mel",
@@ -444,10 +725,66 @@ const produtos = [
       { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
     ],
   },
-
-  // 300 - Sabonetes Específicos
   {
-    id: 301,
+    id: 999,
+    cat: "corpoBanho",
+    subcat: "especiais",
+    nome: "Cereja & Bergamota",
+    desc: "Hidratação e suavidade",
+    icon: "fa-spa",
+    imagemPrincipal: "images/sabonete-cereja-bergamota.jpg",
+    variantes: [
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+    ],
+  },
+  {
+    id: 999,
+    cat: "corpoBanho",
+    subcat: "especiais",
+    nome: "Morango Cremoso",
+    desc: "Hidratação e suavidade",
+    icon: "fa-spa",
+    imagemPrincipal: "images/sabonete-morango-cremoso.jpg",
+    variantes: [
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+    ],
+  },
+  {
+    id: 999,
+    cat: "corpoBanho",
+    subcat: "especiais",
+    nome: "Menta & Alecrim",
+    desc: "Hidratação e revitalização",
+    icon: "fa-spa",
+    imagemPrincipal: "images/sabonete-menta-alecrim.jpg",
+    variantes: [
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+    ],
+  },
+  {
+    id: 999,
+    cat: "corpoBanho",
+    subcat: "especiais",
+    nome: "Veludo de Cereja",
+    desc: "Hidratação e suavidade",
+    icon: "fa-spa",
+    imagemPrincipal: "images/sabonete-veludo-cereja.jpg",
+    variantes: [
+      { idVar: "v1", nome: "Redondo (90g)", preco: 10.49 },
+      { idVar: "v2", nome: "Massageador (130g)", preco: 12.99 },
+      { idVar: "v3", nome: "Massageador com Bucha (130g)", preco: 13.99 },
+    ],
+  },
+
+  // Sabonetes Específicos
+  {
+    id: 23,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Enxofre",
@@ -468,7 +805,7 @@ const produtos = [
     ],
   },
   {
-    id: 302,
+    id: 24,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Enxofre, Açafrão & Argila Branca",
@@ -478,14 +815,13 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "Normal (100g)",
-        preco: 11.99,
+        nome: "Massageador (130g)",
+        preco: 15.99,
       },
-      { idVar: "v2", nome: "Massageador (130g)", preco: 15.99 },
     ],
   },
   {
-    id: 303,
+    id: 25,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Açafrão",
@@ -502,7 +838,7 @@ const produtos = [
     ],
   },
   {
-    id: 304,
+    id: 26,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Argila",
@@ -591,7 +927,7 @@ const produtos = [
     ],
   },
   {
-    id: 305,
+    id: 27,
     cat: "corpoBanho",
     subcat: "especificos",
     nome: "Carvão & Branca",
@@ -607,9 +943,9 @@ const produtos = [
     ],
   },
 
-  // 400 - Energéticos
+  // Energéticos
   {
-    id: 401,
+    id: 28,
     cat: "corpoBanho",
     subcat: "energeticos",
     nome: "Sabonete Energético",
@@ -656,9 +992,9 @@ const produtos = [
     ],
   },
 
-  // 500 - Perfumaria
+  // Body Splash
   {
-    id: 501,
+    id: 29,
     cat: "perfumaria",
     subcat: "splash",
     nome: "Body Splash (120ml)",
@@ -698,10 +1034,27 @@ const produtos = [
       },
     ],
   },
-
-  // 600 - Infantil
   {
-    id: 601,
+    id: 30,
+    cat: "perfumaria",
+    subcat: "splash",
+    nome: "Body Splash (REFIL)",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/body-refil.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 37.99,
+        imagem: "images/body-refil.jpg",
+      },
+    ],
+  },
+
+  // Sabonete Mami Baby
+  {
+    id: 31,
     cat: "infantil",
     nome: "Sabonetes Mami Baby",
     desc: "Fórmula suave",
@@ -740,9 +1093,9 @@ const produtos = [
       },
     ],
   },
-  // 700 - Geleias de Banho
+  // Geleias de Banho
   {
-    id: 706,
+    id: 32,
     cat: "corpoBanho",
     subcat: "geleia",
     nome: "Geleias de Banho (200ml)",
@@ -783,9 +1136,9 @@ const produtos = [
     ],
   },
 
-  // 800 - Sabonete Líquido
+  // Sabonete Líquido
   {
-    id: 801,
+    id: 33,
     cat: "corpoBanho",
     subcat: "liquido",
     nome: "Sabonete Líquido (100ml)",
@@ -831,10 +1184,27 @@ const produtos = [
       },
     ],
   },
-
-  // 900 - Sabonete de Esfoliante
   {
-    id: 901,
+    id: 933,
+    cat: "corpoBanho",
+    subcat: "liquido",
+    nome: "Sabonete Liquido (Refil)",
+    desc: "Esfoliante e hidratante feito com manteiga corporal",
+    icon: "fa-bottle-droplet",
+    imagemPrincipal: "images/sabonete-liquido-refil.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 19.99,
+        imagem: "images/sabonete-liquido-refil.jpg",
+      },
+    ],
+  },
+
+  // Sabonete Esfoliante
+  {
+    id: 35,
     cat: "corpoBanho",
     subcat: "colher",
     nome: "Sabonete Esfoliante (150g)",
@@ -845,27 +1215,44 @@ const produtos = [
       {
         idVar: "v1",
         nome: "Menta",
-        preco: 19.99,
+        preco: 29.99,
         imagem: "images/sabonete-esfoliante-menta.jpg",
       },
       {
         idVar: "v2",
         nome: "Maraacujá",
-        preco: 19.99,
+        preco: 29.99,
         imagem: "images/sabonete-esfoliante-maracuja.jpg",
       },
       {
         idVar: "v3",
         nome: "Morango",
+        preco: 29.99,
+        imagem: "images/sabonete-esfoliante-morango.jpg",
+      },
+    ],
+  },
+  {
+    id: 935,
+    cat: "corpoBanho",
+    subcat: "colher",
+    nome: "Sabonete Esfoliante (Refil)",
+    desc: "Esfoliante e hidratante feito com manteiga corporal",
+    icon: "fa-bottle-droplet",
+    imagemPrincipal: "images/sabonete-esfoliante-refil.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
         preco: 19.99,
         imagem: "images/sabonete-esfoliante-morango.jpg",
       },
     ],
   },
 
-  // 1000 - Linha Masculina
+  // Espuma de barbear
   {
-    id: 1001,
+    id: 36,
     cat: "masculina",
     subcat: "barba",
     nome: "Espuma de Barbear (100ml)",
@@ -882,7 +1269,7 @@ const produtos = [
     ],
   },
   {
-    id: 1002,
+    id: 37,
     cat: "masculina",
     subcat: "barba",
     nome: "Loção Pós-Barba (100ml)",
@@ -898,8 +1285,10 @@ const produtos = [
       },
     ],
   },
+
+  // Sabonetes masculinos
   {
-    id: 1003,
+    id: 38,
     cat: "masculina",
     subcat: "saboneteMasculino",
     nome: "Sabonetes Masculinos (100g)",
@@ -928,9 +1317,9 @@ const produtos = [
     ],
   },
 
-  // 1100 - Aromas para Casa
+  // Água de tecido
   {
-    id: 1101,
+    id: 39,
     cat: "casa",
     subcat: "tecido",
     nome: "Água de Tecido (100ml)",
@@ -966,28 +1355,30 @@ const produtos = [
   },
 
   {
-    id: 1102,
+    id: 40,
     cat: "casa",
     subcat: "tecido",
-    nome: "Água de Tecido <u>(REFIL)</u><br> (O vidro precisa ser devolvido para ser enchido novamente)",
+    nome: "Água de Tecido (REFIL)",
     desc: "Fragrância para roupas e tecidos",
     icon: "fa-house-chimney",
-    imagemPrincipal: "images/agua-tecido.jpg",
+    imagemPrincipal: "images/agua-tecido-refil.jpg",
     variantes: [
       {
         idVar: "v1",
-        nome: "Refil",
+        nome: "",
         preco: 13.99,
-        imagem: "images/agua-tecido.jpg",
+        imagem: "images/agua-tecido-refil.jpg",
       },
     ],
   },
+
+  // Home Spray
   {
-    id: 1201,
+    id: 41,
     cat: "casa",
     subcat: "homeSpray",
     nome: "Home Spray (100ml)",
-    desc: "Perfume para o cômodos e ambiente",
+    desc: "Perfume para cômodos e ambiente",
     icon: "fa-house-chimney",
     imagemPrincipal: "images/home-spray.jpg",
     variantes: [
@@ -1008,6 +1399,662 @@ const produtos = [
         nome: "Limão Doce",
         preco: 18.99,
         imagem: "images/homespray-limaodoce.jpg",
+      },
+    ],
+  },
+  {
+    id: 42,
+    cat: "casa",
+    subcat: "homeSpray",
+    nome: "Home Spray (REFIL)",
+    desc: "Perfume para o cômodos e ambiente",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/homespray-refil.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 13.99,
+        imagem: "images/homespray-refil.jpg",
+      },
+    ],
+  },
+
+  // Difusor de varetas
+  {
+    id: 43,
+    cat: "casa",
+    subcat: "difusor",
+    nome: "Difusor de Varetas (100ml)",
+    desc: "Aromas para cômodos e ambiente",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/difusor.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "Lavanda Francesa",
+        preco: 24.99,
+        imagem: "images/difusor-lavandafrancesa.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Limão Doce",
+        preco: 24.99,
+        imagem: "images/difusor-limaodoce.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "Chá Branco",
+        preco: 24.99,
+        imagem: "images/difusor-chabranco.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "Bamboo",
+        preco: 24.99,
+        imagem: "images/difusor-bamboo.jpg",
+      },
+    ],
+  },
+  {
+    id: 44,
+    cat: "casa",
+    subcat: "difusor",
+    nome: "Difusore de Varetas (REFIL)",
+    desc: "Perfume para o cômodos e ambiente",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/difusor-refil.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 17.99,
+        imagem: "images/difusor-refil.jpg",
+      },
+    ],
+  },
+
+  // Vela artesanal G
+  {
+    id: 45,
+    cat: "casa",
+    subcat: "velaG",
+    nome: "Vela G (130g)",
+    desc: "Perfume e decoração para o seu ambiente",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/velaG.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "Sândalo",
+        preco: 29.99,
+        imagem: "images/velaG-sandalo.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Verbena",
+        preco: 29.99,
+        imagem: "images/velaG-verbena.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "Bamboo",
+        preco: 29.99,
+        imagem: "images/velaG-bamboo.jpg",
+      },
+      {
+        idVar: "v4",
+        nome: "Canela",
+        preco: 29.99,
+        imagem: "images/velaG-canela.jpg",
+      },
+      {
+        idVar: "v5",
+        nome: "Limão Siciliano",
+        preco: 29.99,
+        imagem: "images/velaG-limaosiciliano.jpg",
+      },
+      {
+        idVar: "v6",
+        nome: "Flor de Algodão",
+        preco: 29.99,
+        imagem: "images/velaG-floralgodao.jpg",
+      },
+      {
+        idVar: "v7",
+        nome: "Fita de Vanilla",
+        preco: 29.99,
+        imagem: "images/velaG-fitavanilla.jpg",
+      },
+      {
+        idVar: "v8",
+        nome: "Lavanda Francesa",
+        preco: 29.99,
+        imagem: "images/velaG-lavandafrancesa.jpg",
+      },
+      {
+        idVar: "v9",
+        nome: "Morango com Champanhe",
+        preco: 29.99,
+        imagem: "images/velaG-morangochampanhe.jpg",
+      },
+    ],
+  },
+  {
+    id: 46,
+    cat: "casa",
+    subcat: "velaG",
+    nome: "Vela Especial<br> Morango com Champanhe (150g) ",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/velaG-especialmorango.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "Vela Especial - Morango com Chmapanhe",
+        preco: 34.99,
+      },
+    ],
+  },
+  {
+    id: 47,
+    cat: "casa",
+    subcat: "velaG",
+    nome: "Vela Peônia (80g)",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/velaG-peonia.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "Vela Peônia (80g)",
+        preco: 1000,
+      },
+    ],
+  },
+  {
+    id: 48,
+    cat: "casa",
+    subcat: "velaG",
+    nome: "Vela G (REFIL)",
+    desc: "Perfume e decoração para cômodos e ambientes",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/velaG-refil.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 19.99,
+        imagem: "images/velaG-refil.jpg",
+      },
+    ],
+  },
+
+  // Aromatizador de carro
+  {
+    id: 49,
+    cat: "casa",
+    subcat: "carro",
+    nome: "Aromatizador de carro",
+    desc: "Perfume e decoração automotiva",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/carro.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "Carro Novo",
+        preco: 14.99,
+        imagem: "images/carro-novo.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Limão Siciliano",
+        preco: 14.99,
+        imagem: "images/carro-limaosiciliano.jpg",
+      },
+    ],
+  },
+  {
+    id: 50,
+    cat: "casa",
+    subcat: "carro",
+    nome: "Aromatizador de carro (REFIL)",
+    desc: "Perfume e decoração automotiva",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/carro-refil.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 9.99,
+        imagem: "images/carro-refil.jpg",
+      },
+    ],
+  },
+
+  // Perfume de cabelo
+  {
+    id: 51,
+    cat: "perfumaria",
+    subcat: "cabelo",
+    nome: "Perfume de Cabelo",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/cabelo-.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 24.99,
+        imagem: "images/cabelo-.jpg",
+      },
+    ],
+  },
+  {
+    id: 52,
+    cat: "perfumaria",
+    subcat: "cabelo",
+    nome: "Perfume de cabelo (REFIL)",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/cabelo-.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 19.99,
+        imagem: "images/cabelo-.jpg",
+      },
+    ],
+  },
+
+  // Kits
+  {
+    id: 53,
+    cat: "presentes",
+    subcat: "kits",
+    nome: "UM Sabonete sortido<br> +<br> UMA Bucha de Nylon",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/kit1.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 19.99,
+        imagem: "images/kit1.jpg",
+      },
+    ],
+  },
+  {
+    id: 54,
+    cat: "presentes",
+    subcat: "kits",
+    nome: "TRÊS Sabonetes de frutas sortidos<br> +<br> UMA Bucha de Nylon",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/kit2.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 35.99,
+        imagem: "images/kit2.jpg",
+      },
+    ],
+  },
+  {
+    id: 55,
+    cat: "presentes",
+    subcat: "kits",
+    nome: "QUATRO Sabonetes sortidos",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/kit3.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 42.99,
+        imagem: "images/kit3.jpg",
+      },
+    ],
+  },
+  {
+    id: 56,
+    cat: "presentes",
+    subcat: "kits",
+    nome: "CINCO Sabonetes de frutas sortidos",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/kit4.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 49.99,
+        imagem: "images/kit4.jpg",
+      },
+    ],
+  },
+  {
+    id: 57,
+    cat: "presentes",
+    subcat: "kits",
+    nome: "Copo com UM Cacho de Sabonete",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/kit5.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 29.99,
+        imagem: "images/kit5.jpg",
+      },
+    ],
+  },
+  {
+    id: 58,
+    cat: "presentes",
+    subcat: "kits",
+    nome: "Caixa com UM Cacho de Sabonete",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/kit6.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 34.99,
+        imagem: "images/kit6.jpg",
+      },
+    ],
+  },
+  {
+    id: 59,
+    cat: "presentes",
+    subcat: "kits",
+    nome: "Kit de Algodão",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/kit7.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 48.99,
+        imagem: "images/kit7.jpg",
+      },
+    ],
+  },
+  {
+    id: 60,
+    cat: "presentes",
+    subcat: "kits",
+    nome: "Monte seu Kit",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/kit8.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 0,
+        imagem: "images/kit8.jpg",
+      },
+    ],
+  },
+
+  // Lembrancinhas
+  {
+    id: 61,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Coração",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/deusfiel.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "15 Anos",
+        preco: 1.5,
+        imagem: "images/15anos.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Deus é fiel",
+        preco: 1.5,
+        imagem: "images/deusfiel.jpg",
+      },
+    ],
+  },
+  {
+    id: 62,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Pezinhos",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/pezinhos.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 1.65,
+        imagem: "images/pezinhos.jpg",
+      },
+    ],
+  },
+  {
+    id: 63,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Lembrancinhas Personalizadas",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/lembrancinha-personalizada.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 3.0,
+        imagem: "images/lembrancinha-personalizada.jpg",
+      },
+    ],
+  },
+  {
+    id: 64,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Vela Especial Peônia",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/lembrancinha-peonia.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "Vela Peônia (30g)",
+        preco: 10.99,
+        imagem: "images/lembrancinha-peonia.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Vela Peônia (CAIXA)",
+        preco: 13.99,
+        imagem: "images/lembrancinha-peonia.jpg",
+      },
+    ],
+  },
+  {
+    id: 65,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Letra",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/letra-cubo.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "Quadrada",
+        preco: 2.0,
+        imagem: "images/letra-cubo.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Redonda",
+        preco: 3.0,
+        imagem: "images/lembrancinha-.jpg",
+      },
+    ],
+  },
+  {
+    id: 66,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Mini Pudim",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/minipudim.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 3.0,
+        imagem: "images/minipudim.jpg",
+      },
+    ],
+  },
+  {
+    id: 67,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Mini Sabonete",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/minisabonete.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 3.0,
+        imagem: "images/minisabonete.jpg",
+      },
+    ],
+  },
+  {
+    id: 68,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Vela P (40g)",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/vela-p.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 10.65,
+        imagem: "images/vela-p.jpg",
+      },
+    ],
+  },
+  {
+    id: 69,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Sabonete Líquido",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/miniliquido.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 4.35,
+        imagem: "images/.jpg",
+      },
+    ],
+  },
+  {
+    id: 70,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Geleia de Banho",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/minigeleia.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 4.79,
+        imagem: "images/.jpg",
+      },
+    ],
+  },
+  {
+    id: 71,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Flores",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/miniflor-p.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "Tamanho (P)",
+        preco: 1.6,
+        imagem: "images/miniflor-p.jpg",
+      },
+      {
+        idVar: "v2",
+        nome: "Tamanho (M)",
+        preco: 3.5,
+        imagem: "images/miniflor-m.jpg",
+      },
+      {
+        idVar: "v3",
+        nome: "Rosa (50g)",
+        preco: 1000,
+        imagem: "",
+      },
+    ],
+  },
+  {
+    id: 72,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Escalda Pés",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/escalda-pe.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 2.5,
+        imagem: "images/lembrancinha-.jpg",
+      },
+    ],
+  },
+  {
+    id: 73,
+    cat: "presentes",
+    subcat: "lembrancinha",
+    nome: "Vela Lata",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/lembrancinha-.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 1000.0,
+        imagem: "images/lembrancinha-.jpg",
       },
     ],
   },
