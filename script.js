@@ -984,7 +984,7 @@ const produtos = [
     nome: "Carvão Ativado (70g)",
     desc: "",
     icon: "fa-bottle-droplet",
-    imagemPrincipal: "images/argila-carvao-ativado",
+    imagemPrincipal: "images/argila-carvao-ativado.jpg",
     variantes: [
       {
         idVar: "v1",
@@ -1001,7 +1001,7 @@ const produtos = [
     nome: "Dolomita (70g)",
     desc: "",
     icon: "fa-bottle-droplet",
-    imagemPrincipal: "images/argila-carvao-ativado",
+    imagemPrincipal: "images/argila-dolomita.jpg",
     variantes: [
       {
         idVar: "v1",
@@ -1768,7 +1768,7 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "Vela Especial - Morango com Chmapanhe",
+        nome: "",
         preco: 34.99,
       },
     ],
@@ -2976,7 +2976,7 @@ function checkoutWhatsApp() {
   let msg = "Olá! Gostaria de fazer um pedido na *Fio de Aroma*:\n\n";
   carrinho.forEach(
     (i) =>
-      (msg += `- *${i.quantidade}x ${i.nomeProduto}* (${i.nomeVariante}) - R$ ${(i.preco * i.quantidade).toFixed(2).replace(".", ",")}\n`),
+      (msg += `| *${i.quantidade}x ${i.nomeProduto}* ${i.nomeVariante} - R$ ${(i.preco * i.quantidade).toFixed(2).replace(".", ",")}\n`),
   );
   const labelTotal = document.getElementById("cart-total-price").innerText;
   msg += `\n*TOTAL: ${labelTotal}*`;
