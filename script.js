@@ -95,10 +95,6 @@ const categoriasLayout = [
         titulo: "Difusor de Varetas",
       },
       {
-        id: "velaG",
-        titulo: "Velas Artesanais",
-      },
-      {
         id: "carro",
         titulo: "Aromatizador de Carro",
       },
@@ -118,6 +114,21 @@ const categoriasLayout = [
         titulo: "Lembrancinhas",
       },
     ],
+  },
+  {
+    id: "vela",
+    titulo: "Velas Artesanais",
+    icone: "fa-gift",
+    subcategorias: [
+      {
+        id: 'velaPerfumada',
+        titulo: 'Velas Perfumadas'
+      },
+      {
+        id: 'vela',
+        titulo: 'Vela'
+      }
+    ]
   },
 ];
 
@@ -1683,8 +1694,8 @@ const produtos = [
   },
   {
     id: 56,
-    cat: "casa",
-    subcat: "velaG",
+    cat: "vela",
+    subcat: "velaPerfumada",
     nome: "Vela G (130g)",
     desc: "Perfume e decoração para o seu ambiente",
     icon: "fa-house-chimney",
@@ -1748,8 +1759,8 @@ const produtos = [
   },
   {
     id: 57,
-    cat: "casa",
-    subcat: "velaG",
+    cat: "vela",
+    subcat: "velaPerfumada",
     nome: "Vela Especial<br> Morango com Champanhe (150g) ",
     desc: "",
     icon: "fa-house-chimney",
@@ -1764,8 +1775,8 @@ const produtos = [
   },
   {
     id: 58,
-    cat: "casa",
-    subcat: "velaG",
+    cat: "vela",
+    subcat: "velaPerfumada",
     nome: "Vela G (REFIL)",
     desc: "Perfume e decoração para cômodos e ambientes",
     icon: "fa-house-chimney",
@@ -2854,6 +2865,40 @@ const produtos = [
       },
     ],
   },
+  {
+    id: 91,
+    cat: "vela",
+    subcat: "vela",
+    nome: "Vela de São Miguel",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/vela-miguel.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 29.99,
+        imagem: "",
+      },
+    ],
+  },
+  {
+    id: 92,
+    cat: "vela",
+    subcat: "vela",
+    nome: "Vela de São Miguel (REFIL)",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/vela-miguel-refil.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 20.99,
+        imagem: "",
+      },
+    ],
+  },
 ];
 
 let carrinho = JSON.parse(localStorage.getItem("carrinhoFioDeAroma")) || [];
@@ -2928,7 +2973,7 @@ function removerDoCarrinho(id) {
 
 function checkoutWhatsApp() {
   if (carrinho.length === 0) return alert("Carrinho vazio!");
-  let msg = "Olá! Gostaria de fazer um pedido na *Fio de Aroma* ✨:\n\n";
+  let msg = "Olá! Gostaria de fazer um pedido na *Fio de Aroma*:\n\n";
   carrinho.forEach(
     (i) =>
       (msg += `▪ *${i.quantidade}x ${i.nomeProduto}* (${i.nomeVariante}) - R$ ${(i.preco * i.quantidade).toFixed(2).replace(".", ",")}\n`),
