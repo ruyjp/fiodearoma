@@ -2893,7 +2893,7 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "😀",
+        nome: "",
         preco: 20.99,
         imagem: "",
       },
@@ -2976,7 +2976,7 @@ function checkoutWhatsApp() {
   let msg = "Olá! Gostaria de fazer um pedido na *Fio de Aroma*:\n\n";
   carrinho.forEach(
     (i) =>
-      (msg += `◻️ *${i.quantidade}x ${i.nomeProduto}* (${i.nomeVariante}) - R$ ${(i.preco * i.quantidade).toFixed(2).replace(".", ",")}\n`),
+      (msg += `- *${i.quantidade}x ${i.nomeProduto}* (${i.nomeVariante}) - R$ ${(i.preco * i.quantidade).toFixed(2).replace(".", ",")}\n`),
   );
   const labelTotal = document.getElementById("cart-total-price").innerText;
   msg += `\n*TOTAL: ${labelTotal}*`;
