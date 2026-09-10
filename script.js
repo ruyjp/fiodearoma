@@ -2893,7 +2893,7 @@ const produtos = [
     variantes: [
       {
         idVar: "v1",
-        nome: "",
+        nome: "😀",
         preco: 20.99,
         imagem: "",
       },
