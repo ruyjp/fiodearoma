@@ -1414,19 +1414,19 @@ const produtos = [
       {
         idVar: "v1",
         nome: "Menta",
-        preco: 19.99,
+        preco: 23.99,
         imagem: "images/sabonete-esfoliante-menta.jpg",
       },
       {
         idVar: "v2",
         nome: "Maraacujá",
-        preco: 19.99,
+        preco: 23.99,
         imagem: "images/sabonete-esfoliante-maracuja.jpg",
       },
       {
         idVar: "v3",
         nome: "Morango",
-        preco: 19.99,
+        preco: 23.99,
         imagem: "images/sabonete-esfoliante-morango.jpg",
       },
     ],
