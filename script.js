@@ -126,7 +126,7 @@ const categoriasLayout = [
       },
       {
         id: "vela",
-        titulo: "Vela",
+        titulo: "Velas Temáticas",
       },
     ],
   },
