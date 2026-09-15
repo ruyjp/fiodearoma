@@ -3033,6 +3033,40 @@ const produtos = [
       },
     ],
   },
+  {
+    id: 96,
+    cat: "vela",
+    subcat: "velaPerfumada",
+    nome: "Vela com Peônia",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/vela-com-peonia.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 32.99,
+        imagem: "images/vela-com-peonia.jpg",
+      },
+    ],
+  },
+  {
+    id: 97,
+    cat: "presentes",
+    subcat: "kits",
+    nome: "Vela com Peônia",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/vela-com-peonia.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 32.99,
+        imagem: "images/vela-com-peonia.jpg",
+      },
+    ],
+  },
 ];
 
 let carrinho = JSON.parse(localStorage.getItem("carrinhoFioDeAroma")) || [];
