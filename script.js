@@ -1661,7 +1661,7 @@ const produtos = [
     id: 55,
     cat: "casa",
     subcat: "difusor",
-    nome: "Difusore de Varetas (REFIL)",
+    nome: "Difusor de Varetas (REFIL)",
     desc: "Perfume para o cômodos e ambiente",
     icon: "fa-house-chimney",
     imagemPrincipal: "images/difusor-refil.jpg",
