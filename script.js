@@ -3067,6 +3067,23 @@ const produtos = [
       },
     ],
   },
+  {
+    id: 98,
+    cat: "presentes",
+    subcat: "kits",
+    nome: "Kit Acalanto",
+    desc: "",
+    icon: "fa-house-chimney",
+    imagemPrincipal: "images/kit-acalanto.jpg",
+    variantes: [
+      {
+        idVar: "v1",
+        nome: "",
+        preco: 72.99,
+        imagem: "images/kit-acalanto.jpg",
+      },
+    ],
+  },
 ];
 
 let carrinho = JSON.parse(localStorage.getItem("carrinhoFioDeAroma")) || [];
