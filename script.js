@@ -33,7 +33,7 @@ const categoriasLayout = [
       {
         id: "especificos",
         titulo: "Sabonetes Específicos",
-        banner: "images/guiaSabonete3.jpg",
+        banner: "images/guia-sabonetes-especificos.jpg",
       },
       {
         id: "energeticos",
